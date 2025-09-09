@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto_Renda</title>
+    <link rel="stylesheet" href="proj.css">
+</head>
+<body>
+
+    <div class="main-lateral">
+        <div class="main">
+            <h1>Menu</h1>
+            <div><button class="matematica" onclick="abrirMatematica()">Mat</button></div>
+            <div><button class="gerador" onclick="abrirGerador()">Gerador</button></div>
+        </div>
+
+        <div class="main-tela">
+            <div class="left-camp">
+                <div class="resultado">
+                    <h1>Resultado</h1>
+                    <div id="resultado-display">0.00</div>
+                </div>
+            </div>
+
+            <div class="right-camp">
+                <div class="campos">
+                    <h1>SUA RENDA</h1>
+                    <div class="renda-mensal">
+                        <div class="preencher">
+                            <label for="renda">Renda Mensal</label>
+                            <input type="number" id="renda" name="renda" placeholder="Insira aqui" min="0" inputmode="decimal" pattern="[0-9]*[.,]?[0-9]+">
+                        </div>
+                    </div>
+
+                    <div class="Dependentes">
+                        <div class="preencher">
+                            <label for="dps">Dependentes</label>
+                            <input type="number" id="dps" name="dps" placeholder="Insira aqui" min="0">
+                        </div>
+                    </div>
+
+                    <div class="INSS">
+                        <div class="preencher">
+                            <label for="inss">INSS</label>
+                            <input type="number" id="inss" name="inss" placeholder="Insira aqui" min="0" inputmode="decimal" pattern="[0-9]*[.,]?[0-9]+">
+                        </div>
+                    </div>
+
+                    <div class="IFFR">
+                        <div class="preencher">
+                            <label for="iffr">IRRF</label>
+                            <input type="number" id="irrf" name="irrf" placeholder="Insira aqui" min="0" inputmode="decimal" pattern="[0-9]*[.,]?[0-9]+">
+                        </div>
+                    </div>
+                    <div><button class="confirmar" onclick="calcularResultado()">Calcular</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

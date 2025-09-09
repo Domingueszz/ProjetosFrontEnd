@@ -1,0 +1,10 @@
+No HTML foi utilizado como padrão: header, section e footer. 
+Elementos semânticos importantes que ajudam a estruturar o conteúdo de uma página 
+de maneira organizada e clara.
+
+ - header foi utilizado para agrupar elementos de introdução ou de navegação em uma página. 
+
+ - section foi utilizado para definir seções de um site, como capítulos ou qualquer 
+ agrupamento temático de conteúdo. 
+
+- footer foi utilizado para definir o rodapé de uma seção ou de uma página inteira.

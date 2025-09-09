@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    animation: gradientMove 15s ease infinite;
+    color: #fff;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    height: 280px;
+    width: 420px;
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.5s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.container.active {
+    height: 540px;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%);
+    animation: rotateLight 8s linear infinite;
+}
+
+@keyframes rotateLight {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Header */
+#qr-header {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+#qr-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    background: linear-gradient(to right, #00ffcc, #33ff99);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: floatText 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatText {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
+
+#qr-header p {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Form */
+#qr-form {
+    margin: 25px 10px;
+    z-index: 1;
+    position: relative;
+}
+
+#qr-form input,
+#qr-form button {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+#qr-form input {
+    border: 1px solid #888;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#qr-form input::placeholder {
+    color: #ddd;
+}
+
+#qr-form input:focus {
+    outline: none;
+    border-color: #00ffcc;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#qr-form button {
+    background: linear-gradient(to right, #00c851, #007e33);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#qr-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00c851;
+}
+
+/* Img - QR Code */
+#qr-code {
+    opacity: 0;
+    border: 2px dashed #00ffcc;
+    padding: 30px 0;
+    margin: 25px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: opacity 0.6s ease-in-out, transform 0.4s ease;
+    transform: scale(0.95);
+    z-index: 1;
+}
+
+.container.active #qr-code {
+    opacity: 1;
+    transform: scale(1);
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+       <link rel="stylesheet" href="7base.css">
+       <link rel="stylesheet" href="13cd.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1> MEU <span class="destaque"> PORTFÓLIO</span></h1>
+        <div id="linha-horizontal"></div>
+        <p>PABLO VINICIUS DOMINGUES SANCHES</p>  
+    </header>
+
+    <nav class="menu">
+        <div class="opcoes">
+            <button class="principal" onclick="abrirPerfil(' ')"><i class="material-icons"> account_circle </i></button>
+            <button class="automacao" onclick="abrirAuto('Automação Industrial')">Automação Industrial</button>
+            <button class="web" onclick="abrirDw('Desv. WEB')">Desv. WEB</button>
+            <button class="lp" onclick="abrirLp('Linguagem de Programação')">Linguagem de Programação</button>
+            <button class="bd" onclick="abrirBd('Banco de Dados')">Banco de Dados</button>
+            <button class="cd" onclick="abrirCd('Ciência de Dados')">Ciência de Dados</button>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div id="linha-horizontal2"></div>
+        <div class="titulo">
+            <h3>CIÊNCIA DE DADOS <span> | PROFº CAINÃ</span></h3>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="descricao">
+            <p> Durante o semestre na matéria de Ciência de Dados, exploramos diversos conceitos e técnicas 
+                fundamentais para a análise e interpretação de grandes volumes de dados. 
+                Utilizamos a plataforma <strong>Google Colab</strong> para implementar nossos projetos e 
+                experimentos, aproveitando seu ambiente interativo e baseado em nuvem. <strong>Python</strong> 
+                foi a linguagem de programação principal devido à sua versatilidade e à ampla gama de 
+                bibliotecas disponíveis, como <span>Pandas, NumPy, Matplotlib e Scikit-Learn</span>.
+                <br><br>
+                A disciplina abordou desde a coleta e limpeza de dados, até a visualização e modelagem 
+                preditiva. Aprendemos a manipular dados de diferentes fontes, realizar análises 
+                estatísticas e criar gráficos para entender padrões e tendências. Também nos familiarizamos 
+                com técnicas de <span>machine learning</span>, aplicando <span>algoritmos de classificação, 
+                regressão e clustering</span> para resolver problemas reais.
+                <br><br>
+                Além disso, a integração de <strong>Google Colab</strong> facilitou o compartilhamento de trabalhos e colaborou 
+                para um aprendizado mais dinâmico e prático, permitindo que experimentássemos diretamente 
+                no ambiente de desenvolvimento sem a necessidade de configurações locais complexas. 
+            </p>
+        </div>
+        <div class="img-box">
+            <img src="Imagens_CD/cd.png" alt="perfil" style="width: 450px; margin-top: -20px;">
+        </div>
+    </section>
+
+    <section class="projetos">
+        <div id="linha-horizontal3"></div>
+        <div class="legenda">
+            <h3>CONTEÚDOS</h3>
+        </div>
+    </section>
+
+    <section class="conteudo">
+        <div class="informacao">
+            <button class="play" onclick="entrarC()">Colab - Conteúdo</button>
+            <button class="play" onclick="entrarNc()">Notion - Conteúdo</button>
+            <button class="play" onclick="entrarMc()">MyColab</button>
+
+        </div>
+    </section>
+
+    <footer class="rodape"></footer>
+
+    <script src="conteudo.js"></script>
+
+ 
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador</title>
+    <link rel="stylesheet" href="proj.css">
+</head>
+<body>
+    <div class="main-lateral">
+        <div class="main">
+            <h1>Gerador</h1>
+            <div><button class="voltar" onclick="voltar()">Voltar</button></div>
+        </div>
+
+    <script src="js/script.js" defer></script>
+</head>
+<title>Sandbox</title>
+    <style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    background-color: #f3f3f3;
+}
+
+.editor-container {
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.textarea {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+.textarea:last-of-type {
+    margin-bottom: 0;
+}
+
+.right-column {
+    flex: 1;
+}
+#code-output {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    overflow: auto;
+}
+    </style>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <div class="editor-container">
+        <div class="left-column">
+            <textarea id="html-input" class="textarea" placeholder="Digite seu HTML aqui"></textarea>
+            <textarea id="css-input" class="textarea" placeholder="Digite seu CSS aqui"></textarea>
+            <textarea id="js-input" class="textarea" placeholder="Digite seu JS aqui"></textarea>
+        </div>
+        <div class="right-column">
+            <div id="code-output"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
+    <script>
+        function voltar() {
+            window.location.href = 'index.html'; // Redireciona de volta para a página principal
+        }
+    </script>
+</body>
+</html>

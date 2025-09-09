@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+  }
+  
+  body {
+    background-color: #0a0f1c;
+    background-image: radial-gradient(circle at top left, #1e2b46, #0a0f1c 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #e3f6ff;
+  }
+  
+  .hide {
+    display: none !important;
+  }
+  
+  .container {
+    min-width: 400px;
+    min-height: 400px;
+    background: linear-gradient(145deg, #131a2e, #1b243a);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.06);
+  }
+  
+  /* IMC Form */
+  #calc-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #8be9fd;
+  }
+  
+  .form-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .form-control {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .form-control label {
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+    color: #a2b6cf;
+  }
+  
+  .form-control input {
+    padding: 1rem 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #2d3a57;
+    background-color: #0f172a;
+    color: #e3f6ff;
+    transition: 0.3s;
+  }
+  
+  .form-control input:focus {
+    outline: none;
+    border-color: #00ffe5;
+    box-shadow: 0 0 8px #00ffe540;
+  }
+  
+  .action-control {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  
+  button {
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(to right, #00bcd4, #8e24aa);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    flex: 1;
+    font-weight: bold;
+    border-radius: 8px;
+    opacity: 0.95;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    opacity: 1;
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #00ffe550;
+  }
+  
+  #clear-btn {
+    background: linear-gradient(to right, #444, #222);
+  }
+  
+  #result-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #imc-number {
+    font-size: 2.5rem;
+    margin-bottom: 0.6rem;
+    font-weight: bold;
+    color: #00ffe5;
+  }
+  
+  #imc-info {
+    font-size: 1.2rem;
+    color: #b3cde3;
+  }
+  
+  #result-container h3 {
+    margin-top: 1rem;
+    color: #91d1ff;
+    font-weight: 600;
+  }
+  
+  #imc-table {
+    margin: 1.5rem 0;
+    font-size: 0.85rem;
+    color: #e3f6ff;
+  }
+  
+  .table-header {
+    font-weight: bold;
+    color: #9fc9f3;
+    border-bottom: 1px solid #3a506b;
+  }
+  
+  .table-header,
+  .table-data {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .table-header h4,
+  .table-data p {
+    flex: 1;
+  }
+  
+  .table-header h4:nth-child(3),
+  .table-data p:nth-child(3) {
+    max-width: 80px;
+  }
+  
+  #back-btn {
+    align-self: center;
+    background-color: #111;
+    color: #eee;
+    padding: 0.8rem 1.2rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+    border: 1px solid #333;
+  }
+  
+  #back-btn:hover {
+    background-color: #222;
+    box-shadow: 0 0 8px #8be9fd50;
+  }
+  
+  /* Status Colors */
+  .good {
+    color: #00e676;
+  }
+  
+  .low {
+    color: #ffee58;
+  }
+  
+  .medium {
+    color: #ff9800;
+  }
+  
+  .high {
+    color: #f44336;
+  }
+  

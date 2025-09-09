@@ -1,0 +1,117 @@
+.descricao {
+    max-width: 580px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    text-align: justify;
+    margin-top: 130px;
+    margin-left: 0;
+}
+
+.descricao p {
+    font-size: 16px;
+    margin: 10px 0 25px;
+    cursor: default;
+}
+
+.descricao span,
+.descricao strong {
+    color: #FF3636;
+}
+
+
+.informação2 p{
+    color: white;
+}
+
+.informacao {
+    cursor: default;
+    max-width: 480px;
+    margin-top: 150px;
+    color: white;
+    text-align: justify;
+    margin-left: -100px;
+}
+
+.informacao h1 {
+    margin-bottom: 10px;
+}
+
+.informacao span,
+.informacao strong {
+    color: #FF3636;
+}
+
+.img-1 {
+    transition: all 0.75s;
+}
+
+.img-1:hover {
+    transform: scale(1.1);
+}
+
+.conteudo2 {
+    width: 100%;
+    height: 550px;
+    background: #1D2134;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.informacao2 {
+    max-width: 450px;
+    margin-top: vh;
+    color: white;
+    text-align: justify;
+    margin-left: 10vw;
+    cursor: default;
+}
+
+.informacao2 h1 {
+    margin-bottom: 10px;
+}
+
+
+.informacao2 span,
+.informacao2 strong {
+    color: #FF3636;
+}
+
+.informação2 p{
+    color: white;
+}
+
+.informacao3 {
+    cursor: default;
+    max-width: 450px;
+    margin-top: 100px;
+    color: white;
+    text-align: justify;
+    margin-left: 50px;
+
+}
+
+.informacao3 h1 {
+    margin-bottom: 10px;
+}
+
+.informacao3 span,
+.informacao3 strong {
+    color: #FF3636;
+}
+
+.projetos {
+    width: 100%;
+    height: 200px;
+    background: #1D2134;
+}
+
+.conteudo4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1D2134;
+}
+
+

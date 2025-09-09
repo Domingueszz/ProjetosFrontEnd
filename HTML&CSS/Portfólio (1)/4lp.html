@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="7base.css">
+    <link rel="stylesheet" href="11lingP.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+    <body>
+        <header class="cabecalho">
+            <h1> MEU <span class="destaque"> PORTFÓLIO</span></h1>
+            <div id="linha-horizontal"></div>
+            <p>PABLO VINICIUS DOMINGUES SANCHES</p>  
+        </header>
+    
+        <nav class="menu">
+            <div class="opcoes">
+                <button class="principal" onclick="abrirPerfil(' ')"><i class="material-icons"> account_circle </i></button>
+                <button class="automacao" onclick="abrirAuto('Automação Industrial')">Automação Industrial</button>
+                <button class="web" onclick="abrirDw('Desv. WEB')">Desv. WEB</button>
+                <button class="lp" onclick="abrirLp('Linguagem de Programação')">Linguagem de Programação</button>
+                <button class="bd" onclick="abrirBd('Banco de Dados')">Banco de Dados</button>
+                <button class="cd" onclick="abrirCd('Ciência de Dados')">Ciência de Dados</button>
+            </div>
+        </nav>
+    
+        <section class="home">
+            <div id="linha-horizontal2"></div>
+            <div class="titulo">
+                <h3><span>LINGUAGEM DE PROGRAMAÇÃO </span> | PROFº CAINÃ</h3>
+            </div>
+        </section>
+    
+        <section class="intro">
+            <div class="descricao">
+                <p> Durante o semestre, exploramos conceitos 
+                    fundamentais de programação utilizando <strong>Java.</strong> <br><br> 
+                    <span>Java</span> é uma linguagem versátil e amplamente utilizada na indústria de desenvolvimento de software, 
+                    conhecida por sua portabilidade e segurança. <br><br>
+                    Aprendemos sobre os princípios da <span>programação orientada a objetos</span>, como encapsulamento, 
+                    herança, polimorfismo e abstração, essenciais para criar código modular e reutilizável.
+                    <br><br>
+                    Utilizamos a plataforma <strong>Intellij IDEA</strong> para desenvolvimento, um ambiente integrado 
+                    robusto que oferece ferramentas avançadas para facilitar o desenvolvimento <span>Java.</span>
+                    <br><br>
+                    Além disso, exploramos <strong>JavaFX</strong> para a criação de interfaces gráficas de usuário <span>(GUIs)</span>, 
+                    ]permitindo-nos desenvolver aplicativos desktop interativos e visualmente "atraentes". 
+                    A integração com o <strong>GitHub</strong> foi fundamental para gerenciar e colaborar em projetos de 
+                    forma eficiente, utilizando controle de versão para acompanhar mudanças no código e 
+                    facilitar o trabalho em equipe.
+                </p>
+            </div>
+            <div class="img-box">
+                <img src="Imagens_LP/LP.png" alt="perfil" style="width: 500px; margin-left: 5   0px; margin-bottom: -100px;">
+            </div>
+        </section>
+    
+        <section class="projetos">
+            <div id="linha-horizontal3"></div>
+            <div class="legenda">
+                <h3>PROJETOS</h3>
+            </div>
+        </section>
+
+        <section class="conteudo">
+            <div class="img-1">
+                <img src="Imagens_LP/1.png" alt="perfil" style="width: 700px; height: 655px; margin-left: 100px; margin-top: 25px ;">
+            </div>
+            </div>
+            <div class="informacao">
+                <p> <h1><span><strong> Projeto Screensaver:  ━━━━━━━━ ▣ </strong></span></h1>
+        O projeto <span>Screensaver</span>, desenvolvido em <strong>JavaFX</strong> no <strong>IntelliJ,</strong> exemplifica o uso de classes e métodos para 
+        criar um protetor de tela dinâmico e visualmente interessante. O objetivo do projeto é exibir uma tela cheia de 
+        formas geométricas - <span>quadrados, círculos, elipses e retângulos</span> – que se movem e ricocheteiam nas bordas da tela.
+        <br><br>
+        Para implementar este projeto, criamos várias <span>classes</span> representando cada forma geométrica. Cada classe 
+        contém <span>métodos</span> para desenhar a forma, atualizar sua posição e detectar colisões com as bordas da tela. <br>
+        A lógica de movimento e ricocheteamento é gerida por um método que verifica continuamente a 
+        posição das formas e ajusta suas trajetórias quando atingem as bordas da janela.
+        <br><br>
+        <strong>No IntelliJ,</strong> organizamos o projeto utilizando boas práticas de programação 
+        orientada a objetos, encapsulando as propriedades e comportamentos das formas em suas respectivas 
+        classes e utilizando métodos para modularizar a lógica de movimento e colisão.
+                </p>
+            </div>
+        </section>
+
+        <section class="conteudo2">
+            <div class="informacao2">
+                <p>
+                    <h1><span><strong>Projeto RPG: ———————————— </strong></span></h1>
+                    O <strong>projeto RPG,</strong> desenvolvido em <strong>Java</strong> no <strong>IntelliJ,</strong> 
+                    consiste em uma simulação simples de um jogo de luta. O jogo permite que jogadores definem os personagens e lutem entre si.
+                    <br><br>
+                    A <span>classe principal, Personagem,</span> representa um lutador no jogo com <strong>atributos</strong> como <span>nome, vida, ataque e defesa.</span> 
+                    Além disso, a <span>classe Personagem</span> inclui um <span>método</span> ataque, que permite aos personagens atacar seus adversários. 
+                    O método ataque calcula o dano com base nos atributos de ataque do atacante e defesa do defensor, reduzindo a vida do adversário adequadamente.
+                    <br><br>
+                    Esse projeto demonstra a aplicação de conceitos fundamentais de <span> programação orientada a objetos, como <strong>encapsulamento</strong> e <strong>métodos,</strong></span> proporcionando uma base sólida para o desenvolvimento de jogos mais complexos no futuro.
+                </p>
+                <button class="play" onclick="playVideo2()"><i class="material-icons">play_circle_outline</i></button>
+            </div>
+                <div id="video-container2">
+                    <video class="video2" loop muted style="width: 720px; height: 900px; margin-left:-400px; margin-bottom:50px; margin-top: 50px;">
+                        <source src="Videos/vd.LP.mp4" type="video/mp4">
+                    </video>
+                </div>  
+        </section>
+
+        <section class="conteudo">
+            <div class="img-1">
+                <img src="Imagens_LP/3.png" alt="perfil" style="width: 700px; height: 655px; margin-left: 100px;">
+            </div>
+            </div>
+            <div class="informacao">
+                <p> <h1><span><strong> Projeto Game Java: ━━━━━━━━━ ▣ </strong></span></h1>
+                    O projeto será realizado em <span>squads</span> e consiste na elaboração de um <strong>game em Java,</strong> 
+                    utilizando <strong>JavaFX no IntelliJ.</strong> A equipe irá colaborar para desenvolver um jogo interativo, 
+                    aproveitando as capacidades gráficas e de interface do <span>JavaFX.</span>
+                    <br><br>
+                    O objetivo do projeto é criar um jogo com uma jogabilidade básica, que pode incluir 
+                    elementos como <span>personagens controláveis, obstáculos, pontuações e níveis.</span> 
+                    <br><br>
+                    Cada squad será responsável por diferentes aspectos do desenvolvimento, como design 
+                    de interface, lógica de jogo, e integração de funcionalidades.
+                    <br><br>
+                    Utilizando <strong>Java</strong> e <strong>JavaFX</strong>, o projeto permitirá explorar conceitos avançados 
+                    de <span>programação orientada a objetos</span>, desenvolvimento de interfaces gráficas, e trabalho em equipe 
+                    com ferramentas de controle de versão como <strong>Git.</strong> O resultado será um 
+                    jogo funcional que demonstra habilidades técnicas e de colaboração em equipe.
+                </p>
+            </div>
+        </section>
+
+        <section class="projetos">
+            <div id="linha-horizontal3"></div>
+            <div class="legenda">
+                <h3>CONTEÚDOS</h3>
+            </div>
+        </section>
+
+        <section class="conteudos">
+            <div class="informa">
+                <p>
+                    <h1><span><strong>Listas:</strong></span></h1>
+                    <br><br>
+                    O conjunto de atividades consiste em seis listas de exercícios diferentes, abordando temas essenciais da programação com <span>Java.</span> Cada lista foca em um aspecto específico da linguagem, proporcionando uma base sólida e progressiva para o aprendizado.
+                    <br><br>
+            <strong>✔︎ Variáveis:</strong> Esta lista introduz os conceitos básicos de variáveis, <span>tipos de dados, e operações fundamentais.</span> Os exercícios ajudam a entender como declarar, inicializar e manipular variáveis em <span>Java.</span>
+            <br><br>
+            <strong>✔︎ Estruturas de Decisão:</strong> Focada em <span>estruturas condicionais,</span> esta lista ensina a usar <span>if, else if, else, e switch</span> para tomar decisões no código com base em diferentes condições.
+            <br><br>
+            <strong>✔︎ Estruturas de Repetição:</strong> Aqui, os exercícios abordam os <span>laços for, while, e do-while,</span> permitindo a repetição de blocos de código até que certas condições sejam satisfeitas, essenciais para tarefas iterativas.
+            <br><br>
+            <strong>✔︎ Vetores:</strong> Esta lista explora <span>arrays (vetores)</span>, ensinando como declarar, inicializar, e manipular sequências de elementos, além de abordar iteração e operações comuns sobre <span>arrays.</span>
+            <br><br>
+            <strong>✔︎ Funções:</strong> Focada em <span>métodos (funções)</span>, esta lista ensina a criar e usar <span>métodos</span> para organizar e reutilizar código, passando parâmetros e retornando valores.
+            <br><br>
+            <strong>✔︎ Orientação a Objetos:</strong> A última lista introduz os princípios <span>da programação orientada a objetos</span>, incluindo <span>classes, objetos, herança, polimorfismo, encapsulamento e abstração.</span> Os exercícios ajudam a entender como modelar problemas reais utilizando esses conceitos.
+            <br><br>
+                </p>
+                <button class="link git-button" onclick="abrirGitRep()">
+                    <img src="Imagens/git-img.png.png" alt="github">
+                </button>
+                <button class="link nt-button" onclick="abrirNt1()">
+                    <img src="Imagens/javo.png" alt="github">
+                </button>
+                <button class="link nt-button" onclick="abrirNt2()">
+                    <img src="Imagens/notion.png" alt="github">
+                </button>
+            </div>
+            <div class="img-4">
+                    <img src="Imagens_LP/4.png" alt="perfil" style="width: 500px; height: 500px; margin-top: 30vh;">
+                </div>
+        </section>
+
+        <footer class="rodape"></footer>
+
+
+
+
+    <script src="conteudo.js"></script>
+    <script src="auto.js"></script>
+
+</body>
+</html>   
+

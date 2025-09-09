@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="8menu.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1> MEU <span class="destaque"> PORTFÓLIO</span></h1>
+        <div id="linha-horizontal"></div>
+        <p>PABLO VINICIUS DOMINGUES SANCHES</p>  
+    </header>
+
+    <nav class="menu">
+        <div class="opcoes">
+            <button class="principal" onclick="abrirPerfil(' ')"><i class="material-icons"> account_circle </i></button>
+            <button class="automacao" onclick="abrirAuto('Automação Industrial')">Automação Industrial</button>
+            <button class="web" onclick="abrirDw('Desv. WEB')">Desv. WEB</button>
+            <button class="lp" onclick="abrirLp('Linguagem de Programação')">Linguagem de Programação</button>
+            <button class="bd" onclick="abrirBd('Banco de Dados')">Banco de Dados</button>
+            <button class="cd" onclick="abrirCd('Ciência de Dados')">Ciência de Dados</button>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div class="home-descricao">
+            <div id="linha-horizontal2"></div>
+            
+            <h3>Olá!</h3>
+            <h3>Eu sou <span>Pablo</span> <br> e esse é o meu portfólio</h3>
+            <p> Aqui compartilho com você uma seleção de meus trabalhos e projetos ao decorrer do semestre.
+                Este portfólio é o reflexo de minha dedicação e habilidades desenvolvidas ao longo de minha trajetória. <br>
+                <br>
+                Estou sempre em busca de novos desafios e oportunidades para expandir meus horizontes e contribuir. <br>
+                Neste espaço, você poderá conhecer um pouco mais sobre minha jornada, minhas áreas de atuação e os 
+                resultados alcançados em diferentes desafios.
+            </p>
+        </div> 
+        <div class="img-box">
+            <img src="Imagens/me.png" alt="perfil" style="width: 450px;">
+        </div>
+    </section>
+
+    <section class="sobre-mim">
+        <div class="titulo">
+            <div id="linha-horizontal3"></div>
+            <h3>SOBRE MIM</h3>
+        </div>
+        
+        <div class="conteudo">
+            <div class="links">
+                <button class="link linkedin-button" onclick="abrirLinke()">
+                    <img src="Imagens/linkedin-img.png.png" alt="linkedin">
+                    <p><span>----</span>Linkedin: Pablo Sanches</p>
+                </button>
+                <button class="link git-button" onclick="abrirGit()">
+                    <img src="Imagens/git-img.png.png" alt="github">
+                    <p>GitHub: Domingueszz</p>
+                </button>
+                <button class="link gmail-button" onclick="abrirGmail()">
+                    <img src="Imagens/email-img.png.png" alt="gmail">
+                    <p><span>----</span>Gmail: pablo.domsanches@gmail.com</p>
+                </button>
+            </div>
+            <div class="perfil">
+                <p> Com uma visão holística e multidisciplinar, busco constantemente aliar meus conhecimentos em Análise de Sistemas e em experiências que agregam em minha carreira. <br>
+                    Meu objetivo é me tornar um profissional versátil e com grande valor agregado no mercado de trabalho.
+                    <br>
+                    <br>
+                    <span>►</span> Técnico em Mecatrônica (ETEC); <br>
+                    <br>
+                    <span>►</span> Graduando em Análise e Desenvolvimentos de Sistemas (SENAI); <br>
+                    <br>
+                    <span>►</span> Estagiário 2RP Net. <br>
+                    <br>
+                </p>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+<footer class="rodape"></footer>
+
+    <script src="conteudo.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+.descricao {
+    max-width: 750px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    text-align: justify;
+    margin-top: 130px;
+    margin-left: 0;
+}
+
+.descricao p {
+    font-size: 16px;
+    margin: 10px 0 25px;
+    cursor: default;
+}
+
+.descricao span,
+.descricao strong {
+    color: #FF3636;
+}
+
+.informação2 p{
+    color: white;
+}
+
+.informacao {
+    cursor: default;
+    max-width: 480px;
+    margin-top: 150px;
+    color: white;
+    text-align: justify;
+    margin-left: -200px;
+}
+
+.informacao h1 {
+    margin-bottom: 10px;
+}
+
+.informacao span,
+.informacao strong {
+    color: #FF3636;
+}
+
+.img-box{
+    margin-top: 0;
+  margin-right: -75px;
+}
+
+.img-1 {
+    transition: all 0.75s;
+}
+
+.img-1:hover {
+    transform: scale(1.1);
+}
+
+.conteudo2 {
+    width: 100%;
+    height: 450px;
+    background: #1D2134;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.informacao2 {
+    max-width: 450px;
+    margin-top: 10vh;
+    color: white;
+    text-align: justify;
+    margin-left: 5vw;
+}
+
+.informacao2 h1 {
+    margin-bottom: 10px;
+}
+
+
+.informacao2 span,
+.informacao2 strong {
+    color: #FF3636;
+}
+
+.informacao2 button {
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    margin-left: px;
+    border: none;
+    border-radius: 100px;
+    color: #1D2134;
+    transition: all 0.75s;
+    cursor: pointer;
+}
+
+.informacao2 button:hover {
+    color: #FF3636;
+    transform: scale(1.1);
+}
+
+.conteudos {
+    width: 100%;
+    height: 800px;
+    background: #1D2134;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.informa {
+    max-width: 700px;
+    margin-top: 15vh;
+    color: white;
+    text-align: justify;
+    margin-left: 5vw;
+}
+
+.informa h1 {
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    font-size: 60px;
+}
+
+
+.informa span,
+.informa strong {
+    color: #FF3636;
+}
+
+.informa button {
+    margin-top: 10px;
+    width: 100px;
+    height: 60px;
+    border: none;
+    border-radius: 100px;
+    color: #1D2134;
+    transition: all 0.75s;
+    cursor: pointer;
+    background:#262A43;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin: 5px;
+
+}
+
+.informa button:hover {
+    color: #FF3636;
+    transform: scale(1.1);
+}
+
+.git-button img {
+    height: 46px;
+    width: 80px;
+    margin-left: px;
+    transition: all 0.25s;
+}
+
+.nt-button img {
+    height: 46px;
+    width: 50px;
+    margin-left: px;
+    transition: all 0.25s;
+}

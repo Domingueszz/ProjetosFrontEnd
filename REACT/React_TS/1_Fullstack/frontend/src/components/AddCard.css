@@ -1,0 +1,44 @@
+.add-card {
+  width: 200px;
+  height: 270px;
+  background: #121212;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+
+  .plus {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    border: 2px solid #888;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  #icon1 {
+    margin-bottom: 0.5rem;
+  }
+
+  &:hover {
+    background: #1a1a1a;
+    color: #f9a825;
+    transform: scale(1.03); 
+    .plus {
+      border-color: #f9a825;
+      transform: rotate(20deg); 
+    }
+  }
+}

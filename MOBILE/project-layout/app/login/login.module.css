@@ -1,0 +1,364 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.leftSection {
+  flex: 1;
+  background: linear-gradient(135deg, #4A90E2 0%, #2E5C8A 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: white;
+}
+
+.leftSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+}
+
+.content {
+  max-width: 400px;
+  z-index: 1;
+}
+
+.welcomeText {
+  margin-bottom: 2rem;
+}
+
+.greeting {
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.welcomeTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.logoIcon {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.globe {
+  width: 100%;
+  height: 100%;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.globeInner {
+  width: 70%;
+  height: 70%;
+  position: relative;
+}
+
+.continents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50% 0;
+  transform-origin: center;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 0.8;
+}
+
+.brandSub {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.brandSubSmall {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+.brandTagline {
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-top: 0.25rem;
+  opacity: 0.9;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+}
+
+.learnMoreBtn {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.learnMoreBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.rightSection {
+  flex: 1;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 400px;
+}
+
+.formTitle {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #4A90E2;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #6B7280;
+}
+
+.input {
+  padding: 1rem;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #FAFAFA;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4A90E2;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.passwordContainer {
+  position: relative;
+}
+
+.eyeButton {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6B7280;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyeButton:hover {
+  color: #4A90E2;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #6B7280;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #4A90E2;
+}
+
+.checkboxText {
+  user-select: none;
+}
+
+.forgotPassword {
+  background: none;
+  border: none;
+  color: #4A90E2;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.forgotPassword:hover {
+  color: #2E5C8A;
+  text-decoration: underline;
+}
+
+.submitBtn {
+  background: #4A90E2;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background: #2E5C8A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .leftSection {
+    min-height: 40vh;
+  }
+  
+  .rightSection {
+    min-height: 60vh;
+  }
+  
+  .welcomeTitle {
+    font-size: 2rem;
+  }
+  
+  .formTitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .leftSection,
+  .rightSection {
+    padding: 1.5rem;
+  }
+  
+  .brandName {
+    font-size: 2.5rem;
+  }
+  
+  .options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leftSection,
+  .rightSection {
+    padding: 1rem;
+  }
+  
+  .logo {
+    gap: 0.75rem;
+  }
+  
+  .logoIcon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .brandName {
+    font-size: 2rem;
+  }
+  
+  .welcomeTitle {
+    font-size: 1.5rem;
+  }
+  
+  .formTitle {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,223 @@
+/* Geral */
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 11rem;
+    height:3.5rem;
+}
+
+body {
+    background-image: url(../Images/background.png);
+}
+
+button {
+    background-color: #fff;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: .3rem .5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+
+button i{
+    color: #252525;
+}
+
+button:hover {
+    background-color: #252525;
+    border-color: #252525;
+    color: #fff;
+}
+
+button:hover i {
+    color: #fff;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+#plus-btn {
+    padding: .2rem .3rem;
+    border-radius: 100%;
+}
+
+#erase-btn {
+    border-radius: 15%;
+}
+
+
+input {
+    border-radius: 10px;
+}
+
+input, select {
+    padding: 0.25rem 0.5rem;
+   
+} 
+
+.hide {
+    display: none;
+}
+
+/* Header */
+.todo-container {
+    max-width: 450px;
+    margin: 5rem;   
+    background-color: #fdfdfd;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: rgba(179, 185, 191, 0.884) 0px 8px 24px;
+}
+
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Form */
+#todo-form, #edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+#todo-form p,
+#edit-form p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    display: flex;
+
+}
+
+.form-control input {
+    margin-right: 0.3rem;
+}
+
+#cancel-edit-btn {
+    margin-top: 1rem;
+    background-color: #252525;
+    border-radius: 10px;
+}
+
+#cancel-edit-btn:hover {
+    background-color: #c4c4c4;
+    color: #252525;
+}
+
+/* Toolbar */
+#toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+#toolbar h4 {
+    margin-bottom: .5rem;
+}
+
+#search {
+    border-right: 1px solid #ddd;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form {
+    display: flex;
+    margin-right: 0.3rem;
+}
+
+#search input {
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
+#filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#filter select {
+    flex: 1;
+    border-radius: 10px;
+}
+
+/* List */
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    transition: .3s;
+    border-bottom: 1px solid #ccc;
+}
+
+.todo h3{
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.todo button {
+    margin-left: 0.4rem;
+}
+
+.done {
+    background-color: #252525;
+}
+
+.done h3 {
+    color: #fff;
+    text-decoration: line-through;
+    font-size: italic;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .todo-container {
+        margin: 2rem 1rem;
+        padding: 1rem;
+    }
+
+    .form-control {
+        flex-direction: column;
+    }
+
+    #search form {
+        flex-direction: column;
+    }
+
+    #search input {
+        margin-right: 0;
+    }
+
+    #toolbar {
+        flex-direction: column;
+    }
+
+    #filter, #search {
+        width: 100%;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.25rem 0.4rem;
+    }
+}

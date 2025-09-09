@@ -1,0 +1,167 @@
+/*CSS criado para estelizar cards de ver mais em bd.html*/
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    padding: 25px;
+    background-color:#262A43;
+    text-align: justify;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389);
+    position: relative;
+    margin: 50px;
+
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #FF3636;
+    border-right: 20px solid #FF3636;
+}
+
+/** Icon **/
+.icon {
+    margin-bottom: 20px;
+}
+
+.icon img {
+    width: 250px;
+}
+
+/** Content **/
+.content {
+    height: 215px;
+    overflow: hidden;
+    position: relative;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, #262A43);
+}
+
+.content h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+    position: relative;
+}
+
+.content h3::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 40px;
+    background-color:#fd4747;
+    bottom: 4px;
+    border-radius: 100px;
+}
+
+.content p {
+    color: white;
+    cursor: default;
+}
+
+/** Ler Mais/Menos Button **/
+#read_button {
+    border: none;
+    padding: 10px;
+    border-radius: 2px;
+    margin-top: 15px;
+    background-color:#fd4747;
+    color:#1D2134;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+#read_button:hover {
+    background-color: transparent;
+    color:#fd4747;
+    transition: all 0.2s ease-in-out;
+}
+
+/** Active **/
+.card.active .content {
+    height: auto;
+}
+
+.card.active .content::before {
+    visibility: hidden;
+}
+
+.rodape{
+    width: 100%;
+    height: 30px;
+    background: #262A43;
+}
+
+.card.active .content {
+    height: auto;
+    animation: expandContent 0.5s ease-in-out;
+}
+
+.card.active .content::before {
+    visibility: hidden;
+}
+
+#read_button {
+    border: none;
+    padding: 10px;
+    border-radius: 2px;
+    margin-top: 15px;
+    background-color: #fd4747;
+    color: #1D2134;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(0);
+    animation: buttonAnimation 0.5s ease-in-out;
+}
+
+#read_button:hover {
+    background-color: transparent;
+    color: #fd4747;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(-5px);
+}
+
+.card.active #read_button {
+    transform: rotate(180deg);
+}
+
+@keyframes expandContent {
+    0% {
+        height: 215px;
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        height: auto;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes buttonAnimation {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+

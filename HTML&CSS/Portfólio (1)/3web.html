@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="10desvWeb.css">
+    <link rel="stylesheet" href="11.1cardWeb.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1> MEU <span class="destaque"> PORTFÓLIO</span></h1>
+        <div id="linha-horizontal"></div>
+        <p>PABLO VINICIUS DOMINGUES SANCHES</p>  
+    </header>
+
+    <nav class="menu">
+        <div class="opcoes">
+            <button class="principal" onclick="abrirPerfil(' ')"><i class="material-icons"> account_circle </i></button>
+            <button class="automacao" onclick="abrirAuto('Automação Industrial')">Automação Industrial</button>
+            <button class="web" onclick="abrirDw('Desv. WEB')">Desv. WEB</button>
+            <button class="lp" onclick="abrirLp('Linguagem de Programação')">Linguagem de Programação</button>
+            <button class="bd" onclick="abrirBd('Banco de Dados')">Banco de Dados</button>
+            <button class="cd" onclick="abrirCd('Ciência de Dados')">Ciência de Dados</button>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div id="linha-horizontal2"></div>
+        <div class="titulo">
+            <h3><span>DESENVOLVIMENTO WEB </span> | PROFº ANDRÉ</h3>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="home-descricao">
+            <p> Durante o primeiro semestre, a disciplina de Desenvolvimento Web cobriu os 
+                principais conceitos de <strong><span>HTML, CSS e JavaScript</span></strong>, além do desenvolvimento de sites. <br>
+                <br> 
+                Foram abordados tópicos como a estrutura básica de um documento <span>HTML,</span> elementos e tags HTML, 
+                semântica HTML com o uso de tags semânticas. <br>
+                <br>
+                Também foram vistos a sintaxe e seletores <span>CSS,</span> propriedades de estilização e posicionamento, 
+                bem como responsividade. Em relação ao <span>JavaScript,</span> a disciplina introduziu a linguagem, 
+                a manipulação do DOM (Document Object Model) e a adição de interatividade e comportamento dinâmico 
+                às páginas web. <br>
+                <br>
+                Além disso, foram discutidos tópicos sobre o planejamento e design de estrutura 
+                de sites <span>(Figma)</span>, a criação de layouts responsivos e acessíveis, 
+                e a integração de HTML, CSS e JavaScript no desenvolvimento de páginas e aplicações web.
+            </p>
+        </div>
+        <div class="img-box">
+            <img src="Imagens_DesWeb/desvWeb.png" alt="perfil" style="width: 490px;">
+        </div>
+    </section>
+
+    <section class="projetos">
+        <div id="linha-horizontal3"></div>
+        <div class="legenda">
+            <h3>PROJETOS</h3>
+        </div>
+    </section>
+
+    <section class="conteudo">
+        <div class="img-provas">
+            <img src="Imagens_DesWeb/proj1.png" alt="perfil" style="width: 900px; margin-top: 400px;">
+            <button class="play" onclick="abrirProj1()"><i class="material-icons">open_in_new</i></button>
+            <button class="play2" onclick="abrirProj2()"><i class="material-icons">open_in_new</i></button>
+        </div>
+    </section>
+    
+
+        <section class="conteudo2">
+            <div class="informacao">
+                <strong><span><h1>SOBRE</h1></span></strong>
+                <p> <br>
+                    <br>
+                    Neste primeiro projeto de Desenvolvimento Web, desenvolvemos uma <strong>calculadora 
+                    de Índice de Massa Corporal</strong> (IMC) utilizando  <span>HTML, CSS e JavaScript.</span>
+                    <br><br> 
+                    O objetivo foi aplicar conceitos básicos de criação de páginas web e interatividade. 
+                    Estruturamos a página com <span>campos de entrada</span> para peso e altura, um <span>botão para calcular</span> e 
+                    uma área para exibir o <span>resultado.</span> <br>
+                    <br>Estilizamos a interface para garantir um layout agradável
+                    e responsivo, utilizando flexbox para alinhamento e propriedades de estilo para botões e texto.
+                    <br><br>
+                      Implementamos a lógica de cálculo do IMC em <span>JavaScript</span>, capturando os valores inseridos 
+                      pelo usuário e exibindo o resultado na página. <br>
+                      <br>
+                      A calculadora permite ao usuário inserir seu <span>peso (em kg)</span> e <span>altura (em metros)</span>, 
+                      realizar o cálculo do IMC ao clicar em um botão, e visualizar o resultado junto com uma 
+                      breve interpretação <span>(Obessidade, abaixo do peso e peso ideal).
+                    </span>
+                </p>
+    
+            </div>
+    
+            <div class="informacao2">
+                <strong><span><h1>SOBRE</h1></span></strong>
+                <p><br>
+                    Neste projeto de Desenvolvimento Web, criamos uma <strong>calculadora</strong> que suporta operações
+                     matemáticas utilizando três notações distintas: <span>infix, prefix (pré-fixa) e postfix (pós-fixa).</span><br>
+                     <br> 
+                    Utilizamos <span>HTML</span> para estruturar a interface, <span>CSS</span> para estilizar 
+                    os elementos visuais e <span>JavaScript</span> para implementar a lógica de cada notação.
+                    <br> <br>
+                    <span>Estrutura:</span>
+                    <br> <br>
+                    <strong>❱ Infixa:</strong> A notação padrão em que operadores estão entre os operandos (por exemplo, 2 + 3 * 4).
+                    <br><br>
+                    <strong>❱ Prefixa:</strong> Também conhecida como notação pré-fixa, em que o operador precede os operandos (por exemplo, + 2 * 3 4).
+                    <br><br>
+                    <strong>❱ Pós-fixa:</strong> Também conhecida como notação pós-fixa ou polonesa reversa, onde o operador segue os operandos (por exemplo, 2 3 4 * +).
+                    <br><br>
+                </p>
+            </div>
+        </section>
+
+        <section class="conteudo">
+            <div class="img-provas">
+                <img src="Imagens_DesWeb/proj2.png" alt="perfil" style="width: 900px; margin-top: 400px;">
+                <button class="play" onclick="abrirProj3()"><i class="material-icons">open_in_new</i></button>
+            </div>
+        </section>
+        
+    
+            <section class="conteudo2">
+                <div class="informacao">
+                    <strong><span><h1>SOBRE</h1></span></strong>
+                    <p> <br>
+                        <br>
+                        Neste projeto em Desenvolvimento Web foi elabora em parceria com <span>Bruno Sakamoto</span>, 
+                        um <strong>gerenciador e editor de tabela</strong> de times de futebol, 
+                        utilizamos intensivamente o conceito de <span>DOM (Document Object Model)</span> 
+                        para criar uma aplicação interativa e dinâmica diretamente no navegador.
+                        <br><br>
+                        <span>Estrutura:</span>
+                        <br>
+                        <strong>❱ HTML:</strong> Criamos uma estrutura básica com uma tabela inicialmente vazia para listar os times de futebol. <br><br>
+                        <strong>❱ CSS:</strong> Aplicamos estilos para melhorar a apresentação visual da tabela e dos controles de edição. <br><br>
+                        <strong>❱ JavaScript (DOM):</strong> Implementamos todas as funcionalidades interativas usando o <span>DOM</span> para manipular elementos <span>HTML.</span>
+                        <br><br>
+                        <span>Funcionalidades Implementadas:</span>
+                        <br>
+                        Desenvolvemos um conjunto de funcionalidades que permitiam aos usuários: <br>
+                        ❖ <span>Adicionar Times; Editar Times; Remover Times.</span>
+                        <br><br> 
+                        <strong> DOM:</strong>
+                        <br>
+                        A utilização eficiente do DOM permitiu uma atualização dinâmica e instantânea 
+                        da interface da aplicação sem a necessidade de recarregar a página. <br> 
+                        Isso proporcionou uma experiência de usuário mais fluida e responsiva, 
+                        melhorando significativamente a interatividade da aplicação.                        
+                </p>
+        
+                </div>
+        
+                <div class="informacao2">
+                    <strong><span><h1>SOBRE</h1></span></strong>
+                    <p><br>
+                Neste projeto de Desenvolvimento Web, criamos uma interface para um site de <strong>calcular de renda líquida</strong>, 
+                que oferece funcionalidades adicionais através de um <span>menu intuitivo.</span>
+                        <br><br>
+                <span>Estrutura:</span>
+                        <br>
+                <strong>❱ Interface de Site:</strong> Desenvolvemos uma página web que exibe uma calculadora de renda líquida como funcionalidade principal.
+                <br><br>
+                <strong>❱ Menu de Navegação:</strong> Implementamos um menu com opções para acessar a calculadora e um gerador de HTML adicional.
+                <br><br>
+                <span>Funcionalidades Implementadas:</span>
+                <br>
+                <strong>❖ Calculadora de Renda Líquida:</strong> Oferecemos uma ferramenta interativa onde os usuários 
+                podem inserir informações salariais e descontos <span>(INSS, IRRF e dependentes)</span> para calcular sua renda líquida. <br><br>
+                <strong>❖ Calculadora:</strong> Ferramenta para cálculo de operações matemáticas. <br><br>
+                <strong>❖ Gerador de HTML:</strong> Implementamos uma funcionalidade que permite aos usuários gerar a vizualização da página web através do gerador, facilitando a criação de páginas web simples.
+                    </p>
+                </div>
+            </section>
+
+            <section class="projetos">
+                <div id="linha-horizontal3"></div>
+                <div class="legenda">
+                    <h3 style="margin-left: 35px;">CONTEÚDOS</h3>
+                </div>
+            </section>
+
+            <section class="conteudo3">
+                <div class="card">
+                    <div class="icon">
+                        <img src="Imagens_DesWeb/css.png" alt="" srcset="">
+                    </div>
+
+                    <div class="content">
+                        <h3>CSS</h3>
+                        <p>CSS, ou Cascading Style Sheets, é a linguagem utilizada para estilizar e controlar a apresentação visual de páginas web. 
+                            Ao contrário do HTML, o CSS foca em como esse conteúdo é apresentado ao usuário.
+                            <br><br>
+                            Utilizando regras de estilo, o CSS permite definir cores, fontes, espaçamentos, layouts
+                            e outros aspectos visuais de elementos HTML. 
+                            Isso é feito através de seletores que identificam quais elementos da página serão estilizados 
+                            e propriedades que especificam como eles devem ser apresentados.
+                            <br><br>
+                            A principal vantagem do CSS é sua capacidade de separar o conteúdo (HTML) da apresentação visual, 
+                            o que proporciona maior flexibilidade e facilita a manutenção do código. 
+                            Isso significa que você pode alterar a aparência de uma página inteira modificando apenas um arquivo CSS, sem precisar alterar o HTML.
+                            <br><br>
+                            </p>
+                    
+                    </div>
+                    <button id="read_button">Ler mais</button>
+                </div>
+            
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                        <img src="Imagens_DesWeb/html.webp" alt="" srcset="">
+                    </div>
+
+                    <div class="content">
+                        <h3>HTML</h3>
+                        <p> HTML, ou HyperText Markup Language, é a linguagem fundamental utilizada para criar páginas na web. 
+                            Ela funciona através de uma estrutura de marcação, onde cada elemento é envolvido por tags que definem sua função e apresentação. 
+                            Essas tags permitem organizar o conteúdo de uma página web de forma hierárquica e semântica.
+                            <br><br>
+                            Além de estruturar o conteúdo básico, como textos, imagens e links, o HTML moderno oferece elementos semânticos que ajudam na acessibilidade e indexação por mecanismos de busca.
+                            <br><br>
+                            HTML trabalha em conjunto com CSS (Cascading Style Sheets) para estilizar o conteúdo e JavaScript para adicionar interatividade e comportamento dinâmico às páginas. Essa combinação de tecnologias permite criar desde páginas estáticas simples até aplicações web complexas e responsivas.
+                            <br><br>
+                            </p>
+                    
+                    </div>
+                    <button id="read_button">Ler mais</button>
+                </div>
+            
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                        <img src="Imagens_DesWeb/js.png" alt="" srcset="">
+                    </div>
+
+                    <div class="content">
+                        <h3>JS</h3>
+                        <p>JavaScript, conhecido como JS, é uma linguagem de programação essencial para o desenvolvimento web. <br> 
+                            Ao contrário do HTML e do CSS, o JavaScript adiciona interatividade e funcionalidade dinâmica às aplicações web.
+                            <br><br>
+                            Ele permite criar botões que respondem a cliques, validar formulários antes de enviá-los, e modificar o conteúdo de uma página em tempo real. <br><br> Com o JavaScript, é possível também fazer requisições assíncronas para carregar dados sem recarregar a página inteira.
+                            <br>
+                            Além de ser usado no front-end das aplicações web, o JavaScript também é utilizado no back-end com plataformas como Node.js. <br> Possibilitando o desenvolvimento de aplicações full-stack usando apenas uma linguagem de programação.
+                            JS desempenha um papel crucial na criação de experiências web dinâmica.
+                            <br><br>
+                   
+                            </p>
+                    
+                    </div>
+                    <button id="read_button">Ler mais</button>
+                </div>
+            
+                </div>
+
+            </section>
+
+            <footer class="rodape"></footer>
+
+ <script src="conteudo.js"></script>
+    <script src="auto.js"></script>
+    <script src="web.js"></script>
+    <script src="read.js"></script>
+
+</body>
+</html>   

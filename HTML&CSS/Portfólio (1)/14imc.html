@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="padrao.css">
+</head>
+<body>
+
+    <header>
+        CALCULADORA IMC
+    </header>
+    <main>
+        <div class="calculadora">
+            <p>
+                <label for="iPeso">Peso (kg)</label>            
+                <input type="text" name="iPeso" id="iPeso">
+            </p>
+            <p>
+                <label for="iAltura">Altura (m)</label>
+                <input type="text" name="iAltura" id="iAltura">
+            </p>
+            <span id="resultado">Resultado</span>
+            <button onclick="calcular()">Calcular IMC</button>
+            <button onclick="voltar()">Voltar</button>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy; 2024
+    </footer>
+    
+    <script>
+        function calcular() {
+            var peso = document.getElementById("iPeso").value;
+            var altura = document.getElementById("iAltura").value;
+            var imc = peso / (altura * altura);
+            var resultado = "";
+            if (imc < 18.5) {
+                resultado = "Abaixo do Peso";
+            } else if (imc < 25) {
+                resultado = "Peso Ideal";
+            } else if (imc < 30) {
+                resultado = "Sobrepeso";
+            } else if (imc < 35) {
+                resultado = "Obesidade I";
+            } else if (imc < 40) {
+                resultado = "Obesidade II";
+            } else {
+                resultado = "Obesidade III";
+            }
+            document.getElementById("resultado").textContent = resultado;
+        }
+        function voltar(){
+            window.open('3web.html', '_self')
+        }
+    </script>    
+</body>
+</html>
+
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding: 15px;
+    background-color: #262A43;
+    text-align: center;
+    color: #FF3636;
+    font-size: xx-large;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 2px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 20px;
+    padding: 5px;
+    background-color: #000000;
+    text-align: center;
+    color: #ffffff;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: #1D2134;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main input {
+    width: 200px;
+    padding: 3px;
+    box-shadow: 3px 3px 5px 0px #cd2727;
+}
+
+main label {
+    font-weight: bold;
+    display: block;
+}
+
+main span {
+    font-size: x-large;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+main p {
+    padding: 0px 0px 10px 0px;
+    margin: 0px;
+}
+
+.calculadora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FF3636;
+}
+
+button {
+    margin-top: 15px;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(45deg, #e31c1c, #f3eee8);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+
+button:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+</style>

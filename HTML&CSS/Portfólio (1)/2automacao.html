@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="9auto.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1> MEU <span class="destaque"> PORTFÓLIO</span></h1>
+        <div id="linha-horizontal"></div>
+        <p>PABLO VINICIUS DOMINGUES SANCHES</p>  
+    </header>
+
+    <nav class="menu">
+        <div class="opcoes">
+            <button class="principal" onclick="abrirPerfil(' ')"><i class="material-icons"> account_circle </i></button>
+            <button class="automacao" onclick="abrirAuto('Automação Industrial')">Automação Industrial</button>
+            <button class="web" onclick="abrirDw('Desv. WEB')">Desv. WEB</button>
+            <button class="lp" onclick="abrirLp('Linguagem de Programação')">Linguagem de Programação</button>
+            <button class="bd" onclick="abrirBd('Banco de Dados')">Banco de Dados</button>
+            <button class="cd" onclick="abrirCd('Ciência de Dados')">Ciência de Dados</button>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div id="linha-horizontal2"></div>
+        <div class="titulo">
+            <h3>AUTOMAÇÃO INDUSTRIAL <span> | PROFº GABRIEL CLARO</span></h3>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="home-descricao">
+            <p> Ao longo do semestre, foram abordados diversos tópicos relacionados à automação industrial, 
+                com foco em projetos práticos utilizando diferentes plataformas e recursos. <br>
+                <br>
+                Uma parte importante do aprendizado envolveu a construção de circuitos no <strong><span>TinkerCAD</span></strong>, 
+                uma plataforma de simulação online. Nessa etapa, tivemos a oportunidade de aprender 
+                sobre a programação de placas <span>Arduino</span>, explorando diversos sensores e atuadores, 
+                além de entender o funcionamento básico desses dispositivos. <br>
+                <br>
+                Além disso, os alunos também tiveram contato com a linguagem de programação <strong><span>C++</span></strong>, 
+                aplicada na codificação de soluções para os projetos de automação. <br>
+                Outro tópico abordado foi o uso da plataforma <strong><span>Wokwi</span></strong>, 
+                que permitiu a simulação e prototipagem de projetos envolvendo a placa <span>ESP32</span>. 
+            </p>
+        </div>
+        <div class="img-box">
+            <img src="Imagens/auto-logo.png" alt="perfil" style="width: 430px;">
+        </div>
+    </section>
+
+    <section class="projetos">
+        <div id="linha-horizontal3"></div>
+        <div class="legenda">
+            <h3>PROJETOS</h3>
+        </div>
+    </section>
+
+    <section class="conteudo">
+        <div class="img-semaforo">
+            <img src="Imagens/Semáforo - Arduino-Photoroom.png" alt="perfil" style="width: 630px; height: 555px;">
+        </div>
+        <div id="video-container">
+            <video class="video" loop style="width: 388px; height: 280px;; margin-left: -505px; margin-top: 275px;">
+                <source src="Videos/semaforo-video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="informacao">
+            <p> <h1><span><strong> Sobre: </strong></span></h1>O projeto envolveu a simulação de um <span><strong>semáforo de pedestres e carros </span></strong></span> 
+                utilizando o Arduino e a plataforma <span>TinkerCAD</span>. <br>
+                <br> 
+                O circuito consistia em três conjuntos de LEDs, representando o semáforo de carros, 
+                o semáforo de pedestres e um botão de acionamento do semáforo de pedestres.
+                O programa controlava a sequência de acendimento dos LEDs, 
+                seguindo a lógica convencional de um semáforo, e alterava essa sequência quando o 
+                botão era pressionado, dando prioridade à passagem dos pedestres. <br>
+                <br>
+                Essa atividade permitiu aplicar conceitos de programação em <span>Arduinos</span> com <strong>C++</strong> 
+                e desenvolver habilidades práticas na construção e integração de diferentes componentes em um 
+                sistema de automação simulado.
+            </p>
+            <button class="play" onclick="playVideo()"><i class="material-icons">play_circle_outline</i></button>
+        </div>
+    </section>
+
+    <section class="conteudo2">
+        <div class="informacao2">
+            <p>
+                <h1><span><strong>Sobre:</strong></span></h1>
+                O circuito consiste em um Arduino conectado a um <strong><span>display de sete segmentos.</span></strong><br>
+                <br>
+                Sempre que um botão é pressionado, um contador incrementa o valor exibido no display. 
+                Quando o contador atinge um valor máximo pré-definido, ele retorna ao valor inicial. <br>
+                <br>
+                Dessa forma, o usuário pode acompanhar a contagem através do display de sete segmentos. 
+                Esse tipo de circuito pode ser útil em aplicações que envolvem contagem de eventos, como 
+                a contagem de pessoas em uma sala ou a contagem de itens produzidos em uma linha de montagem. <br>
+                <br>
+                O <span>Tinkercad</span> permite a simulação desse circuito de forma fácil e intuitiva, 
+                facilitando o aprendizado e a prototipagem de projetos baseados em <span>Arduino.</span>
+            </p>
+            <button class="play" onclick="playVideo2()"><i class="material-icons">play_circle_outline</i></button>
+        </div>
+        <div class="img-contador">
+                <img src="Imagens/Contador - Arduino (1) (1) (1).png" alt="perfil" style="width: 600px; height: 600px;">
+            </div>
+            <div id="video-container2">
+                <video class="video2" loop muted style="width: 360px; height: 300px; margin-left:-450px; margin-top:75px; margin-bottom:15px;">
+                    <source src="Videos/vd-contador.mp4" type="video/mp4">
+                </video>
+            </div>  
+    </section>
+
+    <section class="conteudo3">
+        <div class="img-buzzer">
+            <img src="Imagens/Buzzer - Arduino.png" alt="perfil" style="width: 600px;">
+        </div>
+        <div id="video-container3">
+            <video class="video3" loop style="width: 380px; margin-left: -472px; margin-top: 215px;">
+                <source src="Videos/buzzer-vd.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="informacao3">
+            <h1><p><span><strong> Sobre: </strong></span></h1>
+            Trata-se de um projeto que utiliza um <span>Arduino</span>, um LED e um <strong>buzzer</strong> para indicar o nível de iluminação: <br>
+            <br>
+            <span>❱ Nível 1</span> (até 50% de iluminação): LED verde acende; <br>
+            <br>
+            <span>❱ Nível 2</span> (até 75% de iluminação): LED amarelo acende; <br>
+            <br>
+            <span>❱ Nível 3</span> (acima de 75% de iluminação): LED vermelho acende. <br>
+            <br>
+            O buzzer emite um sinal sonoro ("apito") de acordo com o nível de iluminação detectado. Quanto maior o nível de iluminação, mais o buzzer "apita".
+            </p>
+            <button class="play" onclick="playVideo3()"><i class="material-icons">play_circle_outline</i></button>
+        </div>
+    </section>
+
+    <section class="conteudo2">
+        <div class="informacao2">
+            <p>
+                <h1><span><strong>Sobre:</strong></span></h1>
+                O projeto consiste em um circuito com <span>6 LEDs</span> que podem ser ligados em ordem crescente ou decrescente, 
+                controlados pelo terminal serial. <br>
+                <br>
+                Ao escrever <span>'C'</span> no terminal, os LEDs são ligados em ordem crescente: <br>
+                <strong>(1 -> 2 -> 3 -> 4 -> 5 -> 6).</strong> <br>
+                <br>
+                Ao escrever <span> 'D'</span>, os LEDs são ligados em ordem decrescente: <br> 
+                <strong>(6 -> 5 -> 4 -> 3 -> 2 -> 1).</strong> <br>
+                <br>
+                Esse projeto demonstra a capacidade de controlar a ordem de acendimento dos LEDs, 
+                usando o terminal serial para enviar os comandos definidos <span> 'C' </span> e <span>'D'.</span>
+            </p>
+            <button class="play" onclick="playVideo4()"><i class="material-icons">play_circle_outline</i></button>        </div>
+        <div class="img-contador">
+                <img src="Imagens/leds-arduino.png" alt="perfil" style="width: 600px; height: 600px;">
+            </div>
+            <div id="video-container2">
+                <video class="video4" loop muted style="width: 400px; height: 400px; margin-left:-500px; margin-top:140px; margin-bottom:15px;">
+                    <source src="Videos/CeD_Arduino.mp4" type="video/mp4">
+                </video>
+            </div>  
+    </section>
+
+    <section class="projetos">
+        <div id="linha-horizontal3"></div>
+        <div class="legenda">
+            <h3 style="margin-left: 35px;">AVALIAÇÕES</h3>
+        </div>
+    </section>
+
+    <section class="conteudo4">
+        <div class="img-provas">
+            <img src="Imagens/Provas.png" alt="perfil" style="width: 900px; margin-top: 500px; margin-left: 20px;">
+        </div>
+        <div id="video-container5">
+            <video class="video5" loop style="width: 380px; margin-left: -850px; margin-top: 150px;">
+                <source src="Videos/prova1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div id="video-container6">
+            <video class="video6" loop style="width: 385px; margin-left: -435px; margin-top: 100px;">
+                <source src="Videos/vd-prova2.mp4" type="video/mp4">
+            </video>
+        </div>       
+    </section>
+
+    <section class="conteudo5">
+        <div class="informacao4">
+            <button class="play" onclick="playVideo5()"><i class="material-icons">play_circle_outline</i></button>
+            <strong><span><h1>PROVA 1</h1></span></strong>
+            <p> <br>
+                <br>
+                
+O circuito utiliza uma série de botões (verde, azul, amarelo e vermelho) para realizar diferentes funções no <span> ESP32.</span> <br> 
+O botão verde é usado para confirmação, o azul para trocar e confirmar opções, o amarelo para voltar 
+, e o vermelho para sair/cancelar.
+<br><br>
+<strong>Há três principais funcionalidades: <br></strong>
+<br>
+<strong>1. Contador de cliques:</strong> Cada clique no botão azul soma um número no contador exibido no display. 
+<br><br>
+<strong>2. Cronômetro:</strong> Ao iniciar o cronômetro, o botão azul acelera o tempo (250ms por segundo), o amarelo volta ao tempo normal.
+<br><br>
+<strong>3. Zerar dados:</strong> Segurar o botão verde por 3 segundos zera todos os dados, e o botão vermelho cancela a operação, voltando ao menu.</p>
+
+        </div>
+
+        <div class="informacao5">
+            <button class="play" onclick="playVideo6()"><i class="material-icons">play_circle_outline</i></button>
+            <strong><span><h1>PROVA 2</h1></span></strong>
+            <p><br>
+                O projeto consiste em desenvolver um sistema de controle de acesso simples utilizando um Arduino, 
+                um teclado matricial de 4x4 e um <strong><span>display LCD</span></strong> 16x2. <br>
+                <br> 
+                O objetivo é permitir a simulação de um sistema de acesso, onde: <br>
+                <br>
+                <strong>❱ Usuário:</strong> cadastrar senha, alterar senha e ver senha caso seja um usúario, 
+                <br><br>
+                <strong>❱ Administrador:</strong> alterar senha, ver senhas e excluir senhas 
+                <br><br>
+                <span>❖</span> A funcionalidade 'Logooff' está implementada em ambos os casos.
+            </p>
+        </div>
+        
+    </section>
+
+<footer class="rodape"></footer>
+
+    <script src="conteudo.js"></script>
+    <script src="auto.js"></script>
+
+</body>
+</html>

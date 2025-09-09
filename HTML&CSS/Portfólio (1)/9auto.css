@@ -1,0 +1,469 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.cabecalho {
+    height: 30vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #262A43;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+
+.cabecalho > h1 {
+    font-size: 60px;
+    color: white;
+}
+
+.destaque {
+    font-size: 60px;
+    color: #FF3636;
+}
+
+.cabecalho > p {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#linha-horizontal {
+    width: 300px;
+    border: 1px solid #FF3636;
+    margin: 5px auto;
+}
+
+.menu {
+    height: 20vh;
+    width: 100%;
+    background: #1D2134;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu .opcoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu button {
+    margin: 10px;
+    width: 190px;
+    height: 50px;
+    background-color: #1D2134;
+    color: #FF3636;
+    border-style: solid;
+    border-color: #FF3636;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu button i {
+    font-size: 60px;
+    border: none;
+}
+
+.menu button:first-child {
+    border: none;
+    width: 50px;
+    height: 49px;
+    border-radius: 40px;
+    margin-right: 35px;
+}
+
+.menu button:first-child:hover {
+    color: #FF3636;
+    background-color: white;
+}
+
+.menu button:hover {
+    color: white;
+    background-color: #FF3636;
+}
+
+.home {
+    height: 150px;
+    width: 100%;
+    background: #1D2134;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#linha-horizontal2 {
+    width: 100%;
+    border: 3.8px solid #191C2C;
+    margin: 5px auto;
+    margin-bottom: 50px;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.titulo h3 {
+    font-size: 39.5px;
+    color: #FF3636;
+}
+
+.titulo h3 span {
+    color: white;
+}
+
+.intro {
+    height: 550px;
+    width: 100%;
+    background: #1D2134;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 10vw; 
+    margin-top: -170px;
+}
+
+.home-descricao {
+    max-width: 550px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    text-align: justify;
+    margin-top: 140px;
+}
+
+
+.home-descricao p {
+    font-size: 16px;
+    margin: 10px 0 25px;
+    cursor: default;
+}
+
+.home-descricao span {
+    color: #FF3636;
+}
+
+.img-box {
+    transition: all 0.75s;
+    margin-top: 130px;
+}
+
+.img-box:hover {
+    transform: scale(1.2);
+}
+
+.projetos {
+    width: 100%;
+    height: 100px;
+    background: #1D2134;
+}
+
+#linha-horizontal3 {
+    width: 85%;
+    border: 1px solid white;
+    margin-bottom: 50px;
+    margin-left: 7.7vw;
+}
+
+.legenda {
+    text-align: center;
+    cursor: default;
+}
+
+.legenda h3 {
+    font-size: 80px;
+    color: #FF3636;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 5px;
+    text-shadow: #fd4747 1px 0 20px;
+}
+
+.conteudo {
+    width: 100%;
+    height: 650px;
+    background: #1D2134;
+    display: flex;
+}
+
+.img-semaforo {
+    margin-left: 10px;
+    margin-top: 100px;
+}
+
+/* INFO(1) --------------------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------------------------------*/
+.informacao {
+    cursor: default;
+    max-width: 540px;
+    margin-top: 220px;
+    color: white;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+.informacao h1 {
+    margin-bottom: 10px;
+}
+
+.informacao span,
+.informacao strong {
+    color: #FF3636;
+}
+
+.informacao button {
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 100px;
+    color: #1D2134;
+    margin-top: 20px;
+    transition: all 0.75s;
+    cursor: pointer;
+}
+
+.informacao button:hover {
+    color: #FF3636;
+    transform: scale(1.1);
+}
+
+
+.conteudo2 {
+    width: 100%;
+    height: 650px;
+    background: #1D2134;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* INFO(2) --------------------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------------------------------*/
+.informacao2 {
+    max-width: 600px;
+    margin-top: -10vh;
+    color: white;
+    text-align: justify;
+    margin-left: 5vw;
+}
+
+.informacao2 h1 {
+    margin-bottom: 10px;
+}
+
+
+.informacao2 span,
+.informacao2 strong {
+    color: #FF3636;
+}
+
+.informacao2 button {
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    margin-left: 495px;
+    border: none;
+    border-radius: 100px;
+    color: #1D2134;
+    transition: all 0.75s;
+    cursor: pointer;
+}
+
+.informacao2 button:hover {
+    color: #FF3636;
+    transform: scale(1.1);
+}
+
+
+
+.conteudo3 {
+    width: 100%;
+    height: 650px;
+    background: #1D2134;
+    display: flex;
+}
+
+.img-leds {
+    margin-left: -65px;
+    margin-top: -30px;
+}
+
+/* INFO(3) --------------------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------------------------------*/
+.informacao3 {
+    cursor: default;
+    max-width: 570px;
+    margin-top: 110px;
+    color: white;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+.informacao3 h1 {
+    margin-bottom: 10px;
+}
+
+.informacao3 span,
+.informacao3 strong {
+    color: #FF3636;
+}
+
+.informacao3 button {
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 100px;
+    color: #1D2134;
+    margin-top: 20px;
+    transition: all 0.75s;
+    cursor: pointer;
+}
+
+.informacao3 button:hover {
+    color: #FF3636;
+    transform: scale(1.1);
+}
+
+.conteudo4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 525px;
+    background: #1D2134;
+    overflow: hidden; 
+ }
+
+.img-provas img {
+    width: 900px;
+    margin-top: 500px;
+   margin-left: 20px;
+}
+
+#video-container4 {
+    position: relative;
+}
+
+.conteudo5{
+    background: #1D2134;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+}
+
+/* INFO(4) --------------------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------------------------------*/
+
+.informacao4 button{
+    width: 150px;
+    height: 60px;
+    border: none;
+    border-radius: 100px;
+    color: #1D2134;
+    margin-top: 20px;
+    transition: all 0.75s;
+    cursor: pointer;
+    margin-left: 100px;
+    border-style: solid;
+    border-color:#FF3636;
+}
+
+.informacao4 button:hover {
+    color: #FF3636;
+    transform: scale(1.1);
+}
+
+
+.informacao4{
+    max-width: 345px;
+    text-align: justify;
+}
+
+.informacao4 h1{
+    font-size: 60px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.informacao4 span,
+.informacao4 strong {
+    color:#FF3636;
+}
+
+.informacao4 p{
+    color: #ffffff;
+}
+
+ /* INFO(5) --------------------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------------------------------*/
+.informacao5{ 
+    max-width: 360px;
+    text-align:justify;
+    margin-left: 45px;
+}
+
+
+.informacao5 button{
+    width: 150px;   
+    height: 60px;
+    border: none;
+    border-radius: 100px;
+    color: #1D2134;
+    margin-top: 20px;
+    transition: all 0.75s;
+    cursor: pointer;
+    margin-left: 100px;
+    background-color: #FF3636;
+    border-style: solid;
+    border-color: white;
+}
+
+.informacao5 button:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.informacao5 h1{
+    font-size: 60px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacao5 span,
+.informacao5 strong {
+    color: #FF3636;
+}
+
+.informacao5 p{
+    margin-left: 15px;
+    color: #ffffff;
+}
+
+.rodape{
+    width: 100%;
+    height: 30px;
+    background: #262A43;
+}

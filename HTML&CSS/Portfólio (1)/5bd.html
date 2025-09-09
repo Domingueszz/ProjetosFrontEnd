@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="7base.css">
+    <link rel="stylesheet" href="13.1cardBd.css">
+    <link rel="stylesheet" href="12bd.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1> MEU <span class="destaque"> PORTFÓLIO</span></h1>
+        <div id="linha-horizontal"></div>
+        <p>PABLO VINICIUS DOMINGUES SANCHES</p>  
+    </header>
+
+    <nav class="menu">
+        <div class="opcoes">
+            <button class="principal" onclick="abrirPerfil(' ')"><i class="material-icons"> account_circle </i></button>
+            <button class="automacao" onclick="abrirAuto('Automação Industrial')">Automação Industrial</button>
+            <button class="web" onclick="abrirDw('Desv. WEB')">Desv. WEB</button>
+            <button class="lp" onclick="abrirLp('Linguagem de Programação')">Linguagem de Programação</button>
+            <button class="bd" onclick="abrirBd('Banco de Dados')">Banco de Dados</button>
+            <button class="cd" onclick="abrirCd('Ciência de Dados')">Ciência de Dados</button>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div id="linha-horizontal2"></div>
+        <div class="titulo">
+            <h3>BANCO DE DADOS <span> | PROFº CAINÃ</span></h3>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="descricao">
+            <p> A matéria de Banco de Dados abordou conceitos fundamentais e práticos ao longo do semestre. <br> 
+                Iniciamos com a <span>estrutura de dados</span>, onde aprendemos sobre diferentes tipos de dados e 
+                como eles são organizados e manipulados dentro de um banco de dados relacional. 
+                Exploramos modelagem de dados, incluindo <span>diagramas ER (Entidade-Relacionamento),</span> 
+                para visualizar a estrutura e as relações entre dados.
+                <br><br>
+                Estudamos os principais conceitos de banco de dados, como <span>normalização, chaves primárias e 
+                estrangeiras, índices, transações e integridade referencial.</span> Esses conceitos são cruciais 
+                para a criação de bancos de dados eficientes, consistentes e seguros.
+                <br><br>
+                Utilizamos o <strong>PgAdmin,</strong> uma ferramenta de gerenciamento de bancos de dados <span>PostgreSQL,</span>
+                 para realizar tarefas práticas. Aprendemos a criar e gerenciar bancos de dados, tabelas, 
+                 e relacionamentos. Executamos consultas <strong>SQL</strong> para inserir, atualizar, deletar e recuperar 
+                 dados, bem como realizar junções complexas e agregações.
+            </p>
+        </div>
+        <div class="img-box">
+            <img src="Imagens_BD/bd.png" alt="perfil" style="width: 480px; margin-right: -50px;">
+        </div>
+    </section>
+
+    <section class="projetos">
+        <div id="linha-horizontal3"></div>
+        <div class="legenda">
+            <h3>PROJETOS</h3>
+        </div>
+    </section>
+
+    <section class="conteudo">
+        <div class="img-1">
+            <img src="Imagens_BD/proj.png" alt="perfil" style="width: 600px; height: 635px; margin-left: 100px; margin-top: 10px;">
+        </div>
+        </div>
+        <div class="informacao">
+            <p> <h1><span><strong> Projeto Sistema Educacional: </strong></span></h1>
+                No projeto realizado no <strong>PgAdmin</strong>, fomos contratados para projetar o <span>banco de dados relacional 
+                de um sistema educacional</span> para uma universidade. <br>
+                O objetivo era criar um sistema robusto capaz de coletar e gerenciar informações detalhadas 
+                de <span>alunos, cursos, disciplinas e departamentos</span>.
+                <br><br>
+                <strong>Diagrama Entidade-Relacionamento (DER):</strong>
+                <br>
+                Foi criado um Diagrama Entidade-Relacionamento (DER) para visualizar e validar a estrutura 
+                do banco de dados com o cliente. <br>
+                Este <span>DER</span> detalha as relações entre <span>alunos, cursos, disciplinas e departamentos.</span>
+                <br><br>
+                <strong>Consultas e Filtragens:</strong>
+                <br>
+                Para atender às necessidades dos colaboradores da secretaria da universidade, desenvolvemos 
+                várias <span>consultas SQL</span> para <span>filtrar</span> e recuperar dados específicos do sistema.
+            </p>
+        </div>
+    </section>
+
+    <section class="conteudo2">
+        <div class="informacao2">
+            <p>
+        <strong> ... Implementação SQL:</strong>
+        <br>
+        Para a implementação do banco de dados, criamos um arquivo .sql contendo todas as queries organizadas 
+        da seguinte forma:
+        <br><br>
+        <strong>▣ DDL (Data Definition Language):</strong> Comandos para criar as tabelas e definir suas relações.
+        <br><br>
+        <strong>▣ DML (Data Manipulation Language):</strong> Comandos para inserir dados iniciais nas tabelas.
+        <br><br>
+        <strong>▣ DQL (Data Query Language):</strong> Consultas para recuperar dados com base nos requisitos.
+        <br><br>
+        Este projeto exemplifica a criação de um <span>banco de dados relacional</span> para um sistema educacional, 
+        cobrindo desde o design do <strong>DER</strong> até a implementação de consultas <strong>SQL</strong>, usando <strong>PgAdmin</strong> para gestão e 
+        manipulação dos dados.
+
+        </p>
+        </div>
+        <div class="img-1">
+                <img src="Imagens_BD/proj2.png" alt="perfil" style="width: 550px; height: 550px; margin-right: 180px;">
+            </div>
+    </section>
+
+    <section class="conteudo">
+        <div class="img-1">
+            <img src="Imagens_BD/select.jpeg" alt="perfil" style="width: 500px; height: 500px; margin-left: 135px; margin-top: 100px;">
+        </div>
+    </div>
+        <div class="informacao3">
+            <p> <h1><span><strong> Select´s: </strong></span></h1>
+             <span>❱</span> Buscar dados de um aluno pelo <span>RA</span> ou <span>nome</span>; <br><br>
+             <span>❱</span> Exibir <span>cursos</span> associados a um determinado <span>departamento</span>; <br><br>
+             <span>❱</span> Exibir <span>cursos</span> aos quais uma <span>disciplina</span> pertence; <br><br>
+             <span>❱</span> Listar <span>disciplinas</span> que um aluno está cursando, dado o <span>CPF</span>; <br><br>
+             <span>❱</span> Filtrar alunos <span>matriculados</span> em um determinado <span>ativos</span> ou <span>disciplina</span>; <br><br>
+             <span>❱</span> Filtrar alunos <span>formados</span> e alunos <span>ativos</span>; <br><br>
+             <span>❱</span> Contar alunos <span>ativos</span> por <span>ativos</span> e por <span>disciplina</span>. <br><br>
+            <span>❖</span> O comando <strong>SELECT</strong> em <span>SQL</span> é utilizado para consultar 
+            e recuperar dados de um banco de dados. Ele permite selecionar colunas específicas de uma ou mais 
+            tabelas, aplicar filtros, ordenar os resultados e até mesmo limitar a quantidade de 
+            registros retornados. 
+            <br><br>
+            Esses são exemplos de <strong>filtros</strong> que foram <span>selecionados</span> e <span>consultados</span> para realização do projeto.
+
+            </p>
+        </div>
+    </section>
+
+    <section class="projetos">
+        <div id="linha-horizontal3"></div>
+        <div class="legenda">
+            <h3 style="margin-left: 35px;">CONTEÚDOS</h3>
+        </div>
+    </section>
+
+    <section class="conteudo4">
+        <div class="card">
+            <div class="icon">
+                <img src="Imagens_BD/sql.png" alt="" srcset="" style="width: 250px;">
+            </div>
+
+            <div class="content">
+                <h3>SQL</h3>
+                <p> SQL, ou Structured Query Language, é uma linguagem de programação projetada 
+                    para gerenciar bancos de dados relacionais. Ela oferece um conjunto de comandos 
+                    que permitem criar, modificar e consultar dados armazenados em tabelas.
+                    <br><br> 
+                    Com SQL, é possível definir a estrutura de um banco de dados (DDL), inserir, 
+                    atualizar e excluir registros (DML), e realizar consultas complexas para recuperar 
+                    informações específicas (DQL). SQL é amplamente utilizado em aplicações de software 
+                    para manipulação de grandes volumes de dados de maneira eficiente e segura, sendo 
+                    fundamental para desenvolvedores, administradores de banco de dados e analistas de dados 
+                    em diversos contextos industriais e acadêmicos.
+                    Além disso, também permite realizar operações de agrupamento, ordenação e filtragem de dados.
+                    </p>
+            
+            </div>
+            <button id="read_button">Ler mais</button>
+        </div>
+    
+        </div>
+
+        <div class="card">
+            <div class="icon">
+                <img src="Imagens_BD/est.png" alt="" srcset="">
+            </div>
+
+            <div class="content">
+                <h3>DADOS</h3>
+                <p> Estruturas de dados são modelos organizacionais utilizados para armazenar e organizar dados
+                    de forma eficiente dentro de um computador. 
+                    <br><br>
+                    Elas permitem gerenciar e manipular informações de maneira estruturada, facilitando operações como inserção, busca, 
+                    remoção e ordenação. Exemplos comuns incluem listas, pilhas, filas, árvores e grafos,
+                    cada uma otimizada para diferentes tipos de operações e necessidades de armazenamento 
+                    de dados. O estudo de estruturas de dados é essencial para desenvolver algoritmos 
+                    eficientes e sistemas robustos em programação e ciência da computação.
+                    </p>
+            
+            </div>
+            <button id="read_button">Ler mais</button>
+        </div>
+    
+        </div>
+
+        <div class="card">
+            <div class="icon">
+                <img src="Imagens_BD/Nosql_Mongo.png" alt="" srcset="">
+            </div>
+
+            <div class="content">
+                <h3>NOSQL</h3>
+                <p> NoSQL, ou Not Only SQL, é um termo que se refere a uma variedade de sistemas de 
+                    gerenciamento de banco de dados que diferem dos tradicionais bancos de dados relacionais (SQL).
+                    Entre esses, destaca-se o MongoDB, conhecido por sua flexibilidade e escalabilidade, 
+                    sendo ideal para dados não estruturados.
+                    <br><br> 
+                    NoSQL é projetado para lidar com grandes volumes de dados não estruturados ou 
+                    semiestruturados de forma mais flexível e escalável do que os bancos de dados 
+                    relacionais. Esses sistemas são frequentemente utilizados em ambientes de Big Data 
+                    e aplicações web modernas, oferecendo modelos de dados mais dinâmicos como documentos, 
+                    grafos, famílias de colunas e chave-valor. Um exemplo popular é o MongoDB, que é 
+                    valorizado por sua capacidade de suportar velocidades de leitura e escrita elevadas.
+                    </p>
+            </div>
+            <button id="read_button">Ler mais</button>
+        </div>
+        </div>
+    </section>
+
+    <footer class="rodape"></footer>
+
+    <script src="read.js"></script>
+    <script src="conteudo.js"></script>
+    <script src="auto.js"></script>
+
+</body>
+</html>

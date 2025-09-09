@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="fundo">
+        <div class="Calculadora">
+            <h1>Calculadora</h1>
+            <p id="historico"></p>
+            <p id="resultado"></p>
+            <table>
+                <tr>
+                    <td><span>Notação</span></td>
+                    <td><span><input type="radio" name="notacao" value="in" checked onclick="changeNotation('in')"/> In</span></td>
+                    <td><span><input type="radio" name="notacao" value="pre" onclick="changeNotation('pre')"/> Pré</span></td>
+                    <td><span><input type="radio" name="notacao" value="pos" onclick="changeNotation('pos')"/> Pós</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="botao" onclick="clean('C')" style="width: 161px;"> C </button></td>
+                    <td><button class="botao" onclick="back('<')"> < </button></td>
+                    <td><button class="botao" onclick="insert('%')"> % </button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('(')"> ( </button></td>
+                    <td><button class="botao" onclick="insert(')')"> ) </button></td>
+                    <td><button class="botao" onclick="insert('8')"> 8 </button></td>
+                    <td><button class="botao" onclick="insert('9')"> 9 </button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('/')"> / </button></td>
+                    <td><button class="botao" onclick="insert('*')"> x </button></td>
+                    <td><button class="botao" onclick="insert('6')"> 6 </button></td>
+                    <td><button class="botao" onclick="insert('7')"> 7 </button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('-')"> - </button></td>
+                    <td><button class="botao" onclick="insert('+')"> + </button></td>
+                    <td><button class="botao" onclick="insert('4')"> 4 </button></td>
+                    <td><button class="botao" onclick="insert('5')"> 5 </button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('1')"> 1 </button></td>
+                    <td><button class="botao" onclick="insert('2')"> 2 </button></td>
+                    <td><button class="botao" onclick="insert('3')"> 3 </button></td>
+                    <td rowspan="2"><button class="botao" onclick="calcular('')" style="height: 87px;"> = </button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="botao" onclick="insert('0')" style="width: 161px;"> 0 </button></td>
+                    <td><button class="botao" onclick="insert('.')"> . </button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="back">
+        <button onclick="voltar()">Voltar</button>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script>
+    var currentNotation = 'in';
+
+function changeNotation(notation) {
+    currentNotation = notation;
+}
+
+function insert(num) {
+    var numero = document.getElementById('resultado').innerHTML;
+    document.getElementById('resultado').innerHTML = numero + num;
+
+    var numero = document.getElementById('historico').innerHTML;
+    document.getElementById('historico').innerHTML = numero + num;
+}
+
+function clean() {
+    document.getElementById('resultado').innerHTML = "";
+    document.getElementById('historico').innerHTML = "";
+}
+
+function back() {
+    var resultado = document.getElementById('resultado').innerHTML;
+    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length - 1);
+    var resultado = document.getElementById('historico').innerHTML;
+    document.getElementById('historico').innerHTML = resultado.substring(0, resultado.length - 1);
+}
+
+function calcular() {
+    var resultado = document.getElementById('resultado').innerHTML;
+    if (resultado) {
+        if (currentNotation === 'in') {
+            document.getElementById('resultado').innerHTML = evalInfix(resultado);
+        } else if (currentNotation === 'pre') {
+            document.getElementById('resultado').innerHTML = evalPrefix(resultado);
+        } else if (currentNotation === 'pos') {
+            document.getElementById('resultado').innerHTML = evalPostfix(resultado);
+        }
+    } else {
+        document.getElementById('resultado').innerHTML = '';
+    }
+}
+
+// Função para avaliar expressão em notação Infixa
+function evalInfix(expression) {
+    return eval(toPostfix(expression));
+}
+
+// Função para avaliar expressão em notação Pré-Fixa
+function evalPrefix(expression) {
+    var tokens = expression.split(' ');
+    tokens = tokens.reverse();
+    return evalPrefixHelper(tokens);
+}
+
+function evalPrefixHelper(tokens) {
+    var token = tokens.pop();
+    if (!isNaN(parseFloat(token)) && isFinite(token)) {
+        return parseFloat(token);
+    } else {
+        var operand2 = evalPrefixHelper(tokens);
+        var operand1 = evalPrefixHelper(tokens);
+        switch (token) {
+            case '+':
+                return operand1 + operand2;
+            case '-':
+                return operand1 - operand2;
+            case '*':
+                return operand1 * operand2;
+            case '/':
+                return operand1 / operand2;
+        }
+    }
+}
+
+// Função para avaliar expressão em notação Pós-Fixa
+function evalPostfix(expression) {
+    var tokens = expression.split(' ');
+    var stack = [];
+    tokens.forEach(function(token) {
+        if (!isNaN(parseFloat(token)) && isFinite(token)) {
+            stack.push(parseFloat(token));
+        } else {
+            var operand2 = stack.pop();
+            var operand1 = stack.pop();
+            switch (token) {
+                case '+':
+                    stack.push(operand1 + operand2);
+                    break;
+                case '-':
+                    stack.push(operand1 - operand2);
+                    break;
+                case '*':
+                    stack.push(operand1 * operand2);
+                    break;
+                case '/':
+                    stack.push(operand1 / operand2);
+                    break;
+            }
+        }
+    });
+    return stack.pop();
+}
+
+// Função para converter expressão Infixa para Pós-Fixa
+function toPostfix(expression) {
+    var precedence = {
+        '+': 1,
+        '-': 1,
+        '*': 2,
+        '/': 2
+    };
+    var outputQueue = [];
+    var operatorStack = [];
+    var tokens = expression.split(' ');
+
+    tokens.forEach(function(token) {
+        if (!isNaN(parseFloat(token)) && isFinite(token)) {
+            outputQueue.push(token);
+        } else if (token === '(') {
+            operatorStack.push(token);
+        } else if (token === ')') {
+            while (operatorStack.length && operatorStack[operatorStack.length - 1] !== '(') {
+                outputQueue.push(operatorStack.pop());
+            }
+            operatorStack.pop(); // Remover '('
+        } else {
+            while (operatorStack.length && precedence[operatorStack[operatorStack.length - 1]] >= precedence[token]) {
+                outputQueue.push(operatorStack.pop());
+            }
+            operatorStack.push(token);
+        }
+    });
+
+    while (operatorStack.length) {
+        outputQueue.push(operatorStack.pop());
+    }
+
+    return outputQueue.join(' ');
+}
+
+function voltar(){
+            window.open('3web.html', '_self')
+        }
+
+</script>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+.fundo{
+    background-image:linear-gradient(90deg,rgb(255, 255, 255),rgb(115, 199, 222));
+    height: 100vh;
+    color: white;
+    font-family:  Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.Calculadora{
+    position: absolute;
+     background-color: rgb(3, 18, 73);
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     border-radius: 10px;
+     padding: 15px;
+     box-shadow: 12px 8px rgba(75, 75, 75, 0.326);
+     
+}
+    .botao{
+        width: 80px;
+        height: 40px;
+        font-size: 21px;
+        margin: 6;
+        background-color: rgb(56, 56, 56);
+        border-radius: 5px;
+        
+        cursor: pointer;
+        color: white;
+    }
+    .botao:hover{
+        background-color: rgba(75, 75, 75, 0.813);
+    }
+
+    #historico{
+        width: 328px;
+        background-color: rgb(229, 229, 229);
+        height: 20px;
+        margin: 6px;
+        margin-bottom: 10px;
+        font-size: 21px;
+        color: rgba(164, 164, 164, 0.854);
+        text-align: right;
+        padding: 1px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px ;
+    
+    }
+
+    #resultado{
+        width: 328px;
+        background-color: rgb(229, 229, 229);
+        height: 30px;
+        margin: 6px;
+        margin-bottom: 20px;
+        font-size: 21px;
+        color: black;
+        text-align: right;
+        padding: 1px;
+        border-radius: 8px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .fundo {
+        background-image: white;
+        background: white;
+        height: 100vh;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    
+    .Calculadora {
+        position: absolute;
+        background-color: rgb(3, 18, 73);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 12px 8px rgba(75, 75, 75, 0.326);
+    }
+    
+    .botao {
+        width: 80px;
+        height: 40px;
+        font-size: 21px;
+        margin: 1.5px;
+        background-color: rgb(56, 56, 56);
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .back button{
+    margin-top: 15px;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(45deg, #061491, #94cef0);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.back button:hover {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+
+.back button:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+    
+    
+</style>

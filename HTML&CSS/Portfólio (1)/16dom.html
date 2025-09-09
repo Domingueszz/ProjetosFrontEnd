@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="dom.css">
+</head>
+
+<body>
+    <div class="AdicionarTimes">
+        <h1>Formulário: Times</h1>
+        <h4>Insira os Times</h4>
+        <input class="Digitartextos" type="text" placeholder="Digite aqui">
+        <input class="Digitartextos" type="text" placeholder="Digite aqui">
+        <input class="Digitartextos" type="text" placeholder="Digite aqui">
+        <button id="addButton">Add</button>
+        <button id="editButton">Editar</button>
+        <button id="removeButton">Remover</button>
+        <div class="back">
+        <button onclick="voltar()">Voltar</button>
+    </div>
+</div>
+
+    <table id="tabelaTimes" >
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Time 1</th>
+                <th>Time 2</th>
+                <th>Time 3</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script src="dom.js" defer></script>
+</body>
+
+</html>
+
+<style>
+    /* Resetando margens e paddings padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilizando o body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Cor de fundo azul claro */
+    color: #333;
+    padding: 20px;
+}
+
+
+/* Estilizando a seção de adicionar times */
+.AdicionarTimes {
+    background-color: #1D2134; /* Azul da seção */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.AdicionarTimes h1{
+    margin-bottom: 15px;
+    color:#FF3636
+}
+
+.AdicionarTimes h4 {
+    margin-bottom: 15px;
+}
+
+.Digitartextos {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilizando os botões */
+#addButton,
+#editButton,
+#removeButton{
+    background-color: #FF3636; /* Azul dos botões */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.back button{
+    background-color: #ce1111; /* Azul dos botões */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 84px;
+    margin-top: 10px;
+}
+
+#addButton:hover,
+#editButton:hover,
+#removeButton:hover {
+    background-color: #cf2222; /* Azul um pouco mais escuro ao hover */
+}
+
+/* Estilizando a tabela */
+#tabelaTimes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tabelaTimes th,
+#tabelaTimes td {
+    border: 1px solid #FF3636;
+    padding: 10px;
+    text-align: center;
+}
+
+#tabelaTimes thead {
+    background-color: #262A43; /* Azul do cabeçalho da tabela */
+    color: white;
+}
+
+#tabelaTimes tbody tr:nth-child(even) {
+    background-color: #f0f8ff; /* Fundo alternado para as linhas pares */
+}
+</style>
+
+<script>
+    var contadorLinhas = 1; // --> (ID) contar linhas
+var addButton = document.getElementById("addButton");
+var editButton = document.getElementById("editButton");
+var removeButton = document.getElementById("removeButton");
+var tabela = document.getElementById("tabelaTimes");
+
+// --> adicionar funções aos botões
+addButton.addEventListener("click", adicionar_times);
+editButton.addEventListener("click", editar_times);
+removeButton.addEventListener("click", remover_times);
+
+function adicionar_times() {
+  // --> nova linha e valores
+    var time1 = document.querySelectorAll(".Digitartextos")[0].value;
+    var time2 = document.querySelectorAll(".Digitartextos")[1].value;
+    var time3 = document.querySelectorAll(".Digitartextos")[2].value;
+
+    var novaLinha = tabela.insertRow();
+    novaLinha.setAttribute("id", "linha" + contadorLinhas);
+
+    // --> inserir os valores da linha
+    var celulaID = novaLinha.insertCell(0);
+    celulaID.innerHTML = contadorLinhas;
+
+    var celulaTime1 = novaLinha.insertCell(1);
+    celulaTime1.innerHTML = time1;
+
+    var celulaTime2 = novaLinha.insertCell(2);
+    celulaTime2.innerHTML = time2;
+
+    var celulaTime3 = novaLinha.insertCell(3);
+    celulaTime3.innerHTML = time3;
+
+    // --> incrementa o ID
+    contadorLinhas++;
+
+    document.querySelectorAll(".Digitartextos").forEach(input => {
+        input.value = "";
+    });
+}
+
+function editar_times() {
+  // --> editar o ID informando a linha da tabela
+    var idLinha = prompt("Digite o ID da linha que deseja editar:");
+    var novaLinha = tabela.querySelector("#linha" + idLinha);
+    if (novaLinha) {
+        var novoTime1 = prompt("Novo time 1:");
+        var novoTime2 = prompt("Novo time 2:");
+        var novoTime3 = prompt("Novo time 3:");
+        // --> inserir novos valores
+        novaLinha.cells[1].innerHTML = novoTime1;
+        novaLinha.cells[2].innerHTML = novoTime2;
+        novaLinha.cells[3].innerHTML = novoTime3;
+    } else {
+        alert("ID de linha inválido!");
+    }
+}
+
+function remover_times() {
+  // --> remover a linha informando o ID
+    var idLinha = prompt("Digite o ID da linha que deseja remover:");
+    var linhaRemover = tabela.querySelector("#linha" + idLinha);
+    if (linhaRemover) {
+        linhaRemover.remove();
+    } else {
+        alert("ID de linha inválido!");
+    }
+}
+
+function voltar(){
+            window.open('3web.html', '_self')
+        }
+
+</script>
