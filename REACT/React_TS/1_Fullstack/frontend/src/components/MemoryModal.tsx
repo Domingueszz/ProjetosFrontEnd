@@ -13,20 +13,23 @@ type Props = {
 };
 
 export default function MemoryModal({ memory, onClose, onEdit, onDelete }: Props) {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div
         className="modal-content"
-        onClick={(e) => e.stopPropagation()} // Evita fechar ao clicar dentro
+        onClick={(e) => e.stopPropagation()}
       >
-        <img src={memory.image} alt={memory.title} />
+        <img src={`${API_URL}/uploads/${memory.image}`} alt={memory.title} />
+
         <h2>{memory.title}</h2>
         <p>{memory.description}</p>
 
         <div className="modal-actions">
-          <button onClick={() => onEdit(memory._id)}>Editar</button>
-          <button onClick={() => onDelete(memory._id)}>Excluir</button>
-          <button onClick={onClose}>Fechar</button>
+          <button className="btn-edit" onClick={() => onEdit(memory._id)}>Editar</button>
+          <button className="btn-delete" onClick={() => onDelete(memory._id)}>Excluir</button>
+          <button className="btn-close" onClick={onClose}>Fechar</button>
         </div>
       </div>
     </div>

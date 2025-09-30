@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { getMemories } from "../services/memoriesApi";
-import MemoryCard from "../components/MemoryCard";
+import { useNavigate } from 'react-router-dom'; 
+import { getMemories, deleteMemory } from "../services/memoriesApi"; 
 import AddCard from "../components/AddCard";
 import MemoryModal from '../components/MemoryModal';
+import EditMemoryModal from "../components/EditMemoryModal"; 
 import "./Home.css";
 
 type Memory = {
@@ -15,16 +16,42 @@ type Memory = {
 export default function Home() {
   const [memories, setMemories] = useState<Memory[]>([]);
   const [selectedMemory, setSelectedMemory] = useState<Memory | null>(null);
+  const [editingMemory, setEditingMemory] = useState<Memory | null>(null); 
+  const navigate = useNavigate();
 
   async function fetchData() {
     const data = await getMemories();
-    const lastTwo = [...data].slice(-2).reverse();
-    setMemories(lastTwo);
+    const latestTwo = data.slice(0, 2);
+    setMemories(latestTwo);
   }
 
   useEffect(() => {
     fetchData();
   }, []);
+
+  async function handleDelete(id: string) {
+    try {
+      await deleteMemory(id);
+      setMemories(memories.filter((memory) => memory._id !== id));
+      setSelectedMemory(null); 
+    } catch (error) {
+      console.error("Erro ao deletar memória:", error);
+    }
+  }
+
+  function handleEdit(memory: Memory) {
+    setSelectedMemory(null); 
+    setEditingMemory(memory); 
+  }
+
+  function handleUpdate(updatedMemory: Memory) {
+    setMemories(memories.map(m => (m._id === updatedMemory._id ? updatedMemory : m)));
+    setEditingMemory(null);
+  }
+
+  const handleNavigateToCollection = () => {
+    navigate('/collection');
+  };
 
   return (
     <div className="home">
@@ -42,28 +69,41 @@ export default function Home() {
         <AddCard />
       </div>
 
-      <button className="blob-btn view-collection">
-        Ver coleção
-        <span className="blob-btn__inner">
-          <span className="blob-btn__blobs">
-            <span className="blob-btn__blob"></span>
-            <span className="blob-btn__blob"></span>
-            <span className="blob-btn__blob"></span>
-            <span className="blob-btn__blob"></span>
-          </span>
-        </span>
-      </button>
+      <button 
+        className="blob-btn view-collection" 
+        onClick={handleNavigateToCollection}
+      >
+        
+  Ver coleção
+  <span className="blob-btn__inner">
+    <span className="blob-btn__blobs">
+      <span className="blob-btn__blob"></span>
+      <span className="blob-btn__blob"></span>
+      <span className="blob-btn__blob"></span>
+      <span className="blob-btn__blob"></span>
+    </span>
+  </span>
+</button>
 
-      {/* Modal de detalhes */}
+
       {selectedMemory && (
         <MemoryModal
           memory={selectedMemory}
           onClose={() => setSelectedMemory(null)}
-          onEdit={(id) => console.log("Editar", id)}
-          onDelete={(id) => console.log("Excluir", id)}
+          onEdit={() => handleEdit(selectedMemory)}
+          onDelete={() => handleDelete(selectedMemory._id)}
         />
       )}
 
+      {editingMemory && (
+        <EditMemoryModal
+          memory={editingMemory}
+          onClose={() => setEditingMemory(null)}
+          onUpdate={handleUpdate}
+        />
+      )}
+
+      {/* SVG */}
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
         <defs>
           <filter id="goo">

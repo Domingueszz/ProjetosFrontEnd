@@ -1,11 +1,10 @@
 import express from 'express';
 import multer from 'multer';
 import path from 'path';
-import { createMemory, getAllMemories, getMemoryById, deleteMemory } from '../controllers/memoryController';
+import { createMemory, getAllMemories, getMemoryById, updateMemory, deleteMemory } from '../controllers/memoryController';
 
 const router = express.Router();
 
-// Configuração do Multer
 const storage = multer.diskStorage({
   destination: (_req, _file, cb) => {
     cb(null, path.join(__dirname, '../uploads'));
@@ -21,6 +20,8 @@ const upload = multer({ storage });
 router.get('/', getAllMemories);
 router.get('/:id', getMemoryById);
 router.post('/', upload.single('image'), createMemory);
-router.delete('/:id', deleteMemory); // ← adicionada
+router.delete("/:id", deleteMemory);
+router.put("/:id", upload.single("image"), updateMemory);
+
 
 export default router;

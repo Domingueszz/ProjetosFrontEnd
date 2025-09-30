@@ -1,0 +1,35 @@
+.all-memories-page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.all-memories-page h1 {
+  font-size: 2.5rem;
+  color: #f9a825;
+  margin-bottom: 2rem;
+}
+
+.memories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 3rem;
+  padding: 0.75rem 2rem;
+  border: 1px solid #f9a825;
+  background: #1e1e1e;
+  color: #f9a825;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #f9a825;
+  color: #121212;
+}

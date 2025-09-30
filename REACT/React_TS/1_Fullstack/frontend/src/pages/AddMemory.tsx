@@ -11,38 +11,43 @@ export default function AddMemory() {
   const [image, setImage] = useState<File | null>(null);
   const navigate = useNavigate();
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (!image) return alert("Adicione uma imagem!");
+    if (!title || !description || !image) {
+      return alert("Por favor, preencha todos os campos e selecione uma imagem.");
+    }
 
-  const formData = new FormData();
-  formData.append("title", title);
-  formData.append("description", description);
-  formData.append("image", image);
+    setIsLoading(true); 
 
-  try {
-    await createMemory(formData);
-    navigate("/"); 
-  } catch (err) {
-    console.error("Erro ao criar memória", err);
-  }
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("description", description);
+    formData.append("image", image);
 
+    try {
+      await createMemory(formData);
+      navigate("/collection"); 
+    } catch (err) {
+      console.error("Erro ao criar memória", err);
+      alert("Não foi possível criar a memória. Tente novamente.");
+      setIsLoading(false); 
+    }
 
-
-    return <FontAwesomeIcon icon={faReply} />
-    
   };
 
   return (
     <div className="add-memory">
-    <button
-      type="button"
-      className="btn-back"
-      onClick={() => navigate(-1)}
-    >
-      <FontAwesomeIcon icon={faReply} />
-    </button>
+      <button
+        type="button"
+        className="btn-back"
+        onClick={() => navigate(-1)}
+        disabled={isLoading}
+      >
+        <FontAwesomeIcon icon={faReply} />
+      </button>
 
       <h1 className="cool">
         {"Adicionar Memória".split(" ").map((letter, index) => (
@@ -60,6 +65,7 @@ export default function AddMemory() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
+            disabled={isLoading}
           />
         </label>
 
@@ -69,6 +75,7 @@ export default function AddMemory() {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
+            disabled={isLoading}
           />
         </label>
 
@@ -79,10 +86,13 @@ export default function AddMemory() {
             accept="image/*"
             onChange={(e) => setImage(e.target.files?.[0] || null)}
             required
+            disabled={isLoading}
           />
         </label>
 
-        <button type="submit">Salvar</button>
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? "Salvando..." : "Salvar"}
+        </button>
       </form>
     </div>
   );
